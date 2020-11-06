@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+body a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: #4cb152;
+}
+
+h2 {
+  font-family: 'Abel', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  position: absolute;
+  width: 100%;
+  padding: 2rem 10rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  z-index: 3;
+}
+
+.navbar .site-nav {
+  font-family: 'Abel', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar .site-nav .site-link {
+  margin-right: 3.5rem;
+}
+
+.navbar .social-nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.navbar .social-nav .social-link {
+  margin-left: 1.5rem;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 200px;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(43%, rgba(0, 0, 0, 0.622269)), color-stop(74%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.622269) 43%, rgba(0, 0, 0, 0) 74%);
+  z-index: 2;
+}
+
+.hero-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/Background.jpg");
+  background-position-y: bottom;
+  background-position-x: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.logo {
+  margin-bottom: 3rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  z-index: 3;
+}
+
+.cta-button {
+  color: #fff;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  background: none;
+  border: 3px solid #fff;
+  text-align: center;
+  padding: 1em 2em;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  z-index: 3;
+}
+
+.cta-button i {
+  padding-right: 10px;
+}
+
+.cta-button:hover {
+  background-color: #4cb152;
+  border-color: #4cb152;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

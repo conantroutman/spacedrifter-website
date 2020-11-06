@@ -1,0 +1,151 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+// GENERAL
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    color: #fff;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: #4cb152;
+        }
+    }
+}
+
+h2 {
+    font-family: 'Abel', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+// NAVBAR
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    width: 100%;
+    padding: 2rem 10rem;
+    box-sizing: border-box;
+    font-size: 20px;
+    z-index: 3;
+
+    .site-nav {
+        
+        font-family: 'Abel', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        
+        .site-link {
+            margin-right: 3.5rem;
+        }
+    }
+
+    .social-nav {
+        justify-self: end;
+
+        .social-link {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+// HERO
+.hero-section {
+    min-height: 100vh;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 200px;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6222689759497548) 43%, rgba(0,0,0,0) 74%);
+        z-index: 2;
+    }
+}
+
+.hero-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/Background.jpg");
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo {
+    margin-bottom: 3rem;
+    transform: scale(0.8);
+    z-index: 3;
+}
+
+.cta-button {
+    color: #fff;
+    font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    background: none;
+    border: 3px solid #fff;
+    text-align: center;
+    padding: 1em 2em;
+    transition: 0.2s ease-in-out;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    z-index: 3;
+
+    i {
+        padding-right: 10px;
+    }
+
+    &:hover {
+        background-color: #4cb152;
+        border-color: #4cb152;
+        color: #fff;
+        
+    }
+}
+
+// MUSIC
+
+
+// ABOUT
+
+
+// CONTACT
+
+
+// FOOTER
