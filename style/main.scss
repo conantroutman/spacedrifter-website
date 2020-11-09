@@ -172,11 +172,42 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    button {
+        margin-top: 1rem;
+        max-width: 33%;
+    }
 }
 
-.input-group-contact {
+.input {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    label {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    input {
+        height: 4rem;
+    }
+
+    input, textarea {
+        padding: 1rem;
+        font-size: 18px;
+    }
+
+    textarea {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+}
+
+.input-group-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
 }
 
 // FOOTER

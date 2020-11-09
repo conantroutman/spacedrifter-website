@@ -102,18 +102,28 @@
             <div class="container">
                 <h2>Contact</h2>
                 <form class="form-contact" action="">
+                    <input type="hidden" name="contact_number">
                     <div class="input-group-name">
-                        <label for="">First Name</label>
-                        <input type="text" required>
-        
-                        <label for="">Last Name</label>
-                        <input type="text" required>
+                        <div class="input">
+                            <label for="first_name">First Name</label>
+                            <input id="first_name" name="first_name" type="text" placeholder="Börje" required>
+                        </div>
+                        
+                        <div class="input">
+                            <label for="last_name">Last Name</label>
+                            <input id="last_name" name="last_name" type="text" placeholder="Lundin" required>
+                        </div>
                     </div>
-                    <label for="">Email</label>
-                    <input type="email" required>
 
-                    <label for="">Message</label>
-                    <textarea name="" id="" cols="30" rows="10" required></textarea>
+                    <div class="input">
+                        <label for="user_email">Email</label>
+                        <input id="user_email" name="user_email" type="email" placeholder="borje.lundin@mail.com" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="..." required></textarea>
+                    </div>
                     
                     <button type="submit">Submit</button>
                 </form>
@@ -133,6 +143,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
