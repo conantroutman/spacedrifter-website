@@ -27,12 +27,20 @@ body {
     }
 }
 
-h2 {
+h2, h3, h4 {
     font-family: 'Abel', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2 {
     font-size: 3rem;
+    padding: 2rem;
 }
 
 section {
@@ -52,28 +60,34 @@ section {
     position: absolute;
     padding: 2rem 0;
     box-sizing: border-box;
-    font-size: 20px;
+    
     z-index: 3;
     width: 100%;
 
-    .site-nav {
-        
-        font-family: 'Abel', sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        
-        .site-link {
-            margin-right: 3.5rem;
-        }
-    }
-
     .social-nav {
         justify-self: end;
+        font-size: 20px;
 
         .social-link {
             margin-left: 1.5rem;
         }
     }
+}
+
+.site-nav {
+        
+    font-family: 'Abel', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    
+    .site-link {
+        margin-right: 3.5rem;
+    }
+}
+
+.list-nav {
+    list-style: none;
 }
 
 // HERO
@@ -135,7 +149,7 @@ section {
     z-index: 3;
 }
 
-.cta-button {
+.button {
     color: #fff;
     font-family: 'Abel', sans-serif;
     text-transform: uppercase;
@@ -165,7 +179,34 @@ section {
 
 
 // ABOUT
+.members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 3rem;
+}
 
+.member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.bio {
+    
+}
 
 // CONTACT
 .form-contact {
@@ -211,3 +252,13 @@ section {
 }
 
 // FOOTER
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-logo {
+    max-width: 100px;
+    max-height: 100px;
+    transform: scale(0.5);
+}
