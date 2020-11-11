@@ -259,6 +259,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .input label {
@@ -287,26 +288,47 @@ section {
           column-gap: 1rem;
 }
 
-.form-validation {
-  color: red;
+.validation {
   padding: 0.5rem 0;
   font-size: 0.75rem;
 }
 
-.form-validation::before {
+.validation-invalid {
   color: red;
+}
+
+.validation-invalid::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: '\f057';
   padding-right: 0.25rem;
 }
 
-.form-validation .last-name::after {
+.validation-invalid.validation-first-name::after {
+  content: 'Please enter your first name.';
+}
+
+.validation-invalid.validation-last-name::after {
   content: 'Please enter your last name.';
 }
 
-.form-validation .first-name::after {
-  content: 'Please enter your first name.';
+.validation-invalid.validation-email::after {
+  content: 'Please enter a valid email address.';
+}
+
+.validation-invalid.validation-message::after {
+  content: 'Please enter a message.';
+}
+
+.validation-valid {
+  color: green;
+}
+
+.validation-valid::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f058';
+  padding-right: 0.25rem;
 }
 
 .contact-text {
