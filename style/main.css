@@ -48,8 +48,15 @@ section {
 
 .container {
   max-width: 1100px;
+  width: 90%;
   margin: auto;
   position: relative;
+}
+
+.separator {
+  width: 100vw;
+  height: 20rem;
+  background-color: #4cb152;
 }
 
 .navbar {
@@ -190,6 +197,7 @@ section {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 3rem;
           column-gap: 3rem;
+  margin-top: 4rem;
 }
 
 .member {
@@ -218,6 +226,10 @@ section {
 .member h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.bio {
+  margin-bottom: 8rem;
 }
 
 .form-contact {
@@ -252,13 +264,11 @@ section {
 .input label {
   margin-bottom: 0.5rem;
   font-weight: bold;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
 }
 
-.input input {
-  height: 4rem;
-}
-
-.input input, .input textarea {
+.input input, .input textarea, .input select {
   padding: 1rem;
   font-size: 18px;
 }
@@ -277,17 +287,44 @@ section {
           column-gap: 1rem;
 }
 
+.form-validation {
+  color: red;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
+.form-validation::before {
+  color: red;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f057';
+  padding-right: 0.25rem;
+}
+
+.form-validation .last-name::after {
+  content: 'Please enter your last name.';
+}
+
+.form-validation .first-name::after {
+  content: 'Please enter your first name.';
+}
+
+.contact-text {
+  padding: 2rem 0;
+}
+
 .footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  padding: 6rem;
 }
 
 .footer-logo {
   max-width: 100px;
   max-height: 100px;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
 }
 /*# sourceMappingURL=main.css.map */

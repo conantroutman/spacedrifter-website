@@ -49,8 +49,15 @@ section {
 
 .container {
     max-width: 1100px;
+    width: 90%;
     margin: auto;
     position: relative;
+}
+
+.separator {
+    width: 100vw;
+    height: 20rem;
+    background-color: #4cb152;
 }
 
 // NAVBAR
@@ -179,10 +186,15 @@ section {
 
 
 // ABOUT
+.about-section {
+    //background-color: rgb(17, 17, 17);
+}
+
 .members {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 3rem;
+    margin-top: 4rem;
 }
 
 .member {
@@ -205,7 +217,7 @@ section {
 }
 
 .bio {
-    
+    margin-bottom: 8rem;
 }
 
 // CONTACT
@@ -228,21 +240,23 @@ section {
     label {
         margin-bottom: 0.5rem;
         font-weight: bold;
+        font-family: 'Abel', sans-serif;
+        text-transform: uppercase;
     }
 
-    input {
-        height: 4rem;
-    }
-
-    input, textarea {
+    input, textarea, select {
         padding: 1rem;
         font-size: 18px;
+
+        
     }
 
     textarea {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
     }
+
+    
 }
 
 .input-group-name {
@@ -251,14 +265,54 @@ section {
     column-gap: 1rem;
 }
 
+.form-validation {
+    color: red;
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+
+    &::before {
+        color: red;
+        //position: absolute;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f057';
+        padding-right: 0.25rem;
+    }
+}
+
+.form-validation .first-name {
+    
+}
+
+.form-validation .last-name {
+    &::after {
+        content: 'Please enter your last name.';
+    }
+}
+
+.form-validation .first-name {
+    &::after {
+        content: 'Please enter your first name.';
+    }
+}
+
+.contact-text {
+    padding: 2rem 0;
+}
+
 // FOOTER
+.footer-section {
+    //background-color: rgb(17, 17, 17);
+}
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 6rem;
 }
 
 .footer-logo {
     max-width: 100px;
     max-height: 100px;
-    transform: scale(0.5);
+    transform: scale(0.4);
 }
