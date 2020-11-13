@@ -83,15 +83,11 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
+  width: 40%;
 }
 
 .social-nav li {
   list-style: none;
-}
-
-.social-nav .social-link {
-  margin-left: 1.5rem;
 }
 
 .social-nav.list-nav {
@@ -112,15 +108,11 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
+  width: 60%;
 }
 
 .site-nav li {
   list-style: none;
-}
-
-.site-nav .site-link {
-  margin-right: 3.5rem;
 }
 
 .site-nav.list-nav {

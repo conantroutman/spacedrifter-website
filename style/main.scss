@@ -79,14 +79,10 @@ section {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
 
   li {
     list-style: none;
-  }
-
-  .social-link {
-    margin-left: 1.5rem;
   }
 
   &.list-nav {
@@ -101,14 +97,10 @@ section {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 60%;
 
   li {
     list-style: none;
-  }
-
-  .site-link {
-    margin-right: 3.5rem;
   }
 
   &.list-nav {
