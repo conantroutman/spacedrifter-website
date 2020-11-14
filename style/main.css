@@ -218,11 +218,16 @@ section {
 .members {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 3rem;
-          column-gap: 3rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 3rem;
   margin-top: 4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .member {
@@ -243,7 +248,7 @@ section {
 }
 
 .member img {
-  max-width: 100%;
+  max-width: 200px;
   border-radius: 50%;
   margin-bottom: 1.5rem;
 }
@@ -255,6 +260,13 @@ section {
 
 .bio {
   margin-bottom: 8rem;
+}
+
+@media (max-width: 1100px) {
+  .members {
+    -ms-grid-columns: (200px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 200px);
+  }
 }
 
 .form-contact {

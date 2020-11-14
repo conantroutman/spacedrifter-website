@@ -194,15 +194,14 @@ section {
 // MUSIC
 
 // ABOUT
-.about-section {
-  //background-color: rgb(17, 17, 17);
-}
-
 .members {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 3rem;
   margin-top: 4rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .member {
@@ -213,7 +212,7 @@ section {
   text-align: center;
 
   img {
-    max-width: 100%;
+    max-width: 200px;
     border-radius: 50%;
     margin-bottom: 1.5rem;
   }
@@ -226,6 +225,12 @@ section {
 
 .bio {
   margin-bottom: 8rem;
+}
+
+@media(max-width:1100px) {
+  .members {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
 }
 
 // CONTACT
