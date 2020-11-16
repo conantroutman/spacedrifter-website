@@ -46,6 +46,7 @@ h2 {
 
 section {
   min-height: 100vh;
+  background-color: black;
 }
 
 .container {
@@ -166,7 +167,7 @@ section {
   z-index: 2;
 }
 
-.hero-background {
+.showcase {
   position: absolute;
   left: 0;
   top: 0;
@@ -175,11 +176,12 @@ section {
   overflow: hidden;
 }
 
-.hero-background img {
-  max-width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: -5em;
+.showcase .hero-image {
+  background-image: url("/images/Background.jpg");
+  background-position: center;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
 }
 
 .logo {

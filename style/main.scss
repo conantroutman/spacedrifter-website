@@ -47,6 +47,7 @@ h2 {
 
 section {
   min-height: 100vh;
+  background-color: black;
 }
 
 .container {
@@ -119,6 +120,7 @@ section {
 
   position: relative;
 
+  // Black fade top
   &::before {
     content: "";
     position: absolute;
@@ -131,6 +133,7 @@ section {
     z-index: 2;
   }
 
+  // Black fade bottom
   &::after {
     content: "";
     position: absolute;
@@ -144,7 +147,7 @@ section {
   }
 }
 
-.hero-background {
+.showcase {
   position: absolute;
   left: 0;
   top: 0;
@@ -152,11 +155,12 @@ section {
   height: 100vh;
   overflow: hidden;
 
-  img {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: -5em;
+  .hero-image {
+    background-image: url("/images/Background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: inherit;
+    height: inherit;
   }
 }
 
