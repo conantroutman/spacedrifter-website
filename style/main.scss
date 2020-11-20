@@ -383,14 +383,31 @@ section {
 
 .footer {
   background: rgb(17, 17, 17);
-  padding: 4rem;
+  padding: 3rem 0 1rem 0;
 
   .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     .social-nav {
-      width: 20%;
+      max-width: 20%;
+    }
+
+    .credits {
+      font-size: .75rem;
+      opacity: 0.75;
+      margin-top: 2rem;
+
+      p {
+        margin-top: .5rem;
+
+        em {
+          font-style: normal;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

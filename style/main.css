@@ -430,7 +430,7 @@ section {
 
 .footer {
   background: #111111;
-  padding: 4rem;
+  padding: 3rem 0 1rem 0;
 }
 
 .footer .container {
@@ -440,9 +440,31 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer .container .social-nav {
-  width: 20%;
+  max-width: 20%;
+}
+
+.footer .container .credits {
+  font-size: .75rem;
+  opacity: 0.75;
+  margin-top: 2rem;
+}
+
+.footer .container .credits p {
+  margin-top: .5rem;
+}
+
+.footer .container .credits p em {
+  font-style: normal;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
