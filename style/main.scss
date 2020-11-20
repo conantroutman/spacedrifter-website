@@ -235,6 +235,10 @@ section {
 }
 
 // ABOUT
+.about-section {
+  background: rgb(17, 17, 17);
+}
+
 .members {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -378,13 +382,15 @@ section {
 // FOOTER
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 6rem;
-}
+  background: rgb(17, 17, 17);
+  padding: 4rem;
 
-.footer-logo {
-  max-width: 100px;
-  max-height: 100px;
-  transform: scale(0.4);
+  .container {
+    display: flex;
+    justify-content: center;
+
+    .social-nav {
+      width: 20%;
+    }
+  }
 }

@@ -265,6 +265,10 @@ section {
           transform: scale(1.1);
 }
 
+.about-section {
+  background: #111111;
+}
+
 .members {
   display: -ms-grid;
   display: grid;
@@ -425,17 +429,20 @@ section {
 }
 
 .footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  padding: 6rem;
+  background: #111111;
+  padding: 4rem;
 }
 
-.footer-logo {
-  max-width: 100px;
-  max-height: 100px;
-  -webkit-transform: scale(0.4);
-          transform: scale(0.4);
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .container .social-nav {
+  width: 20%;
 }
 /*# sourceMappingURL=main.css.map */
