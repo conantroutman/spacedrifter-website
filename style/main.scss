@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 // GENERAL
+
+$color_secondary: #4cb152;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,7 +25,7 @@ body {
     transition: 0.2s ease-in-out;
 
     &:hover {
-      color: #4cb152;
+      color: $color_secondary;
     }
   }
 }
@@ -60,7 +63,7 @@ section {
 .separator {
   width: 100vw;
   height: 20rem;
-  background-color: #4cb152;
+  background-color: $color_secondary;
 }
 
 // NAVBAR
@@ -189,8 +192,8 @@ section {
   }
 
   &:hover {
-    background-color: #4cb152;
-    border-color: #4cb152;
+    background-color: $color_secondary;
+    border-color: $color_secondary;
     color: #fff;
   }
 }
