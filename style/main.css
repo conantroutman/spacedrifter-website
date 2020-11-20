@@ -266,7 +266,7 @@ section {
 }
 
 .about-section {
-  background: #111111;
+  background: #0f0f0f;
 }
 
 .members {
@@ -429,7 +429,7 @@ section {
 }
 
 .footer {
-  background: #111111;
+  background: #0f0f0f;
   padding: 3rem 0 1rem 0;
 }
 
@@ -454,13 +454,14 @@ section {
 }
 
 .footer .container .credits {
-  font-size: .75rem;
+  font-size: 0.75rem;
   opacity: 0.75;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .footer .container .credits p {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .footer .container .credits p em {

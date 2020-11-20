@@ -5,6 +5,8 @@
 // GENERAL
 
 $color_secondary: #4cb152;
+$color_background: #000;
+$color_background_light: rgb(15, 15, 15);
 
 * {
   box-sizing: border-box;
@@ -239,7 +241,7 @@ section {
 
 // ABOUT
 .about-section {
-  background: rgb(17, 17, 17);
+  background: $color_background_light;
 }
 
 .members {
@@ -385,7 +387,7 @@ section {
 // FOOTER
 
 .footer {
-  background: rgb(17, 17, 17);
+  background: $color_background_light;
   padding: 3rem 0 1rem 0;
 
   .container {
@@ -399,12 +401,13 @@ section {
     }
 
     .credits {
-      font-size: .75rem;
+      font-size: 0.75rem;
       opacity: 0.75;
       margin-top: 2rem;
+      text-align: center;
 
       p {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
 
         em {
           font-style: normal;
