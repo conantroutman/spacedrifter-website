@@ -1,0 +1,18 @@
+{
+    "releases": [
+        {
+            "title": "Cabin Fever",
+            "date": "2020-06-12",
+            "type": "Single",
+            "cover": "https://i.scdn.co/image/ab67616d00001e022e04e61fcfbbf51b30f4ab3f",
+            "spotifyId": "5KAWeDP3sSPt7C1nn3UDEM"
+        },
+        {
+            "title": "Spacedrifter",
+            "date": "2020-12-12",
+            "type": "EP",
+            "cover": "./images/Epbild 1.jpg",
+            "spotifyId": "5KAWeDP3sSPt7C1nn3UDEM"
+        }
+    ]
+}

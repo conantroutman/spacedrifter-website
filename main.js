@@ -87,3 +87,32 @@ const setValidationMessage = (element, isValid) => {
         element.parentElement.querySelector('.validation').classList.add('validation-valid');
     }
 }
+
+const getSpotifyReleases = () => {
+    const test = document.querySelector(".releases");
+    fetch('./releases.json')
+        .then(response => response.json())
+        .then(data => {
+            data.releases.forEach(release => {
+                console.log(release.title);
+                const html = `
+                <div class="release">
+                    <div class="cover-image">
+                        <img src="${release.cover}"></img>
+                    </div>
+                    <iframe src="https://open.spotify.com/embed/album/${release.spotifyId}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <h3>${release.title}</h3>
+                    <div>${new Date(release.date).getFullYear()}</div>
+                    <div>${release.type}</div>
+                </div>
+                `;
+                test.innerHTML += html;
+            });
+        })
+}
+
+const setLatestRelease = () => {
+    
+}
+
+getSpotifyReleases();

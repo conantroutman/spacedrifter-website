@@ -196,6 +196,43 @@ section {
 }
 
 // MUSIC
+.releases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  //justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.release {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    margin-bottom: 1rem;
+  }
+}
+
+.cover-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: inherit;
+    height: inherit;
+    transition: 0.5s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
 
 // ABOUT
 .members {
@@ -339,9 +376,6 @@ section {
 }
 
 // FOOTER
-.footer-section {
-  //background-color: rgb(17, 17, 17);
-}
 
 .footer {
   display: grid;
