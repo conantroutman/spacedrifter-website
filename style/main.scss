@@ -76,7 +76,6 @@ section {
   position: absolute;
   padding: 2rem 0;
   box-sizing: border-box;
-
   z-index: 3;
   width: 100%;
 }
@@ -113,6 +112,61 @@ section {
   &.list-nav {
     flex-direction: column;
   }
+}
+
+// Hamburger menu
+$hamburger-layer-color: #fff;
+@import './hamburgers/hamburgers.scss';
+
+.burger {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  right: -5vw;
+  z-index: 11;
+  display: none;
+  cursor: pointer;
+}
+
+// Responsiveness stuff
+@media (max-width: 845px) {
+  .navbar {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+
+    .site-nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 80%;
+      font-size: 2rem;
+    }
+
+    .social-nav {
+      //display: none;
+      font-size: 2rem;
+      width: 90%;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.navbar-active {
+  transform: translateX(0%);
 }
 
 // HERO
@@ -205,8 +259,8 @@ section {
 .releases {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
-  //justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  //gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -215,7 +269,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1.5rem;
 
+  // Spotify player
   iframe {
     margin-bottom: 1rem;
   }
@@ -238,6 +294,12 @@ section {
       transform: scale(1.1);
     }
   }
+}
+
+@media (max-width: calc(600px + 10vw)) {
+.releases {
+  justify-content: center;
+}
 }
 
 // ABOUT
