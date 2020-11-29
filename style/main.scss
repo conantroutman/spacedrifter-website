@@ -116,7 +116,7 @@ section {
 
 // Hamburger menu
 $hamburger-layer-color: #fff;
-@import './hamburgers/hamburgers.scss';
+@import "./hamburgers/hamburgers.scss";
 
 .burger {
   width: 4rem;
@@ -255,6 +255,12 @@ $hamburger-layer-color: #fff;
   }
 }
 
+@media (max-width: 845px) {
+  .button {
+    min-width: 100%;
+  }
+}
+
 // MUSIC
 .releases {
   display: grid;
@@ -297,9 +303,9 @@ $hamburger-layer-color: #fff;
 }
 
 @media (max-width: calc(600px + 10vw)) {
-.releases {
-  justify-content: center;
-}
+  .releases {
+    justify-content: center;
+  }
 }
 
 // ABOUT
@@ -464,7 +470,7 @@ $hamburger-layer-color: #fff;
     align-items: center;
 
     .social-nav {
-      max-width: 20%;
+      width: 12rem;
     }
 
     .credits {
