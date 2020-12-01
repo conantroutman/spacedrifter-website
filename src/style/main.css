@@ -1516,7 +1516,7 @@ section {
 }
 
 .showcase .hero-image {
-  background-image: url("/images/Background.jpg");
+  background-image: url("../images/Background.jpg");
   background-position: center;
   background-size: cover;
   background-position-y: 40%;
