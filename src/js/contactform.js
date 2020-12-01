@@ -3,7 +3,17 @@ import emailjs from 'emailjs-com';
 emailjs.init('user_fCTH9aMY7vGCzXlFmXEOH');
 
 const form = document.querySelector('.form-contact');
+const firstName = document.querySelector('#first_name');
+const lastName = document.querySelector('#last_name');
+const email = document.querySelector('#user_email');
+const message = document.querySelector('#message');
 //form.addEventListener("submit", (event) => {sendEmail(event, form)})
+
+firstName.addEventListener("blur", (event) => {validateFirstName(event)});
+lastName.addEventListener("blur", (event) => {validateLastName(event)});
+email.addEventListener("blur", (event) => {validateEmail(event)});
+message.addEventListener("blur", (event) => {validateMessage(event)});
+
 form.addEventListener("submit", (event) => {validateForm(event)});
 
 const sendEmail = (form) => {

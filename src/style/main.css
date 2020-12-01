@@ -42,7 +42,12 @@ h3 {
 
 h2 {
   font-size: 3rem;
-  padding: 2rem 0;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #000;
 }
 
 .section-header::after {
@@ -54,11 +59,6 @@ h2 {
 .email-link {
   color: #4cb152;
   font-weight: bold;
-}
-
-section {
-  min-height: 100vh;
-  background-color: black;
 }
 
 .container {

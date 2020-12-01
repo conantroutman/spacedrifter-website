@@ -1,4 +1,4 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,16 +7,28 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: ''
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.svg$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -33,6 +45,7 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [new HtmlWebpackPlugin({
-    template: 'src/index.html'
+    template: 'src/index.html',
+    minify: true,
   })]
 };

@@ -48,7 +48,13 @@ h3 {
 
 h2 {
   font-size: 3rem;
-  padding: 2rem 0;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  background-color: $color_background;
 }
 
 .section-header {
@@ -65,11 +71,6 @@ h2 {
 .email-link {
   color: $color_secondary;
   font-weight: bold;
-}
-
-section {
-  min-height: 100vh;
-  background-color: black;
 }
 
 .container {
@@ -264,9 +265,6 @@ $hamburger-layer-color: #fff;
       transform: scale(1.1);
     }
   }
-}
-
-@media (max-width: 480px) {
 }
 
 // ABOUT

@@ -84,7 +84,7 @@
     </header>
 
     <main>
-        <section id="music" class="music-section">
+        <section id="music" class="section music-section">
             <div class="container">
                 <h2 class="section-header">Our Music</h2>
                 <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:4otyLOpxTJ6VdY0EEfjIcS&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
@@ -92,7 +92,7 @@
             </div>
         </section>
 
-        <section id="about" class="about-section">
+        <section id="about" class="section about-section">
             <div class="container">
                 <h2 class="section-header">Bio</h2>
                 <div class="content">
@@ -130,7 +130,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
+        <section id="contact" class="section contact-section">
             <div class="container">
                 <h2 class="section-header">Get in Touch</h2>
                 <p class="section-text">Want to get in touch with us? Use the contact form below, or email us directly at <a class="email-link" href="mailto:contact@spacedrifter.band">contact@spacedrifter.band</a></p>
@@ -139,26 +139,26 @@
                     <div class="input-group-name">
                         <div class="input">
                             <label for="first_name">First Name</label>
-                            <input id="first_name" name="first_name" type="text" placeholder="Börje" required onkeyup="validateFirstName()" onblur="validateFirstName()">
+                            <input id="first_name" name="first_name" type="text" placeholder="Börje" required>
                             <span class="validation validation-first-name"></span>
                         </div>
                         
                         <div class="input">
                             <label for="last_name">Last Name</label>
-                            <input id="last_name" name="last_name" type="text" placeholder="Lundin" required onkeyup="validateLastName()" onblur="validateLastName()">
+                            <input id="last_name" name="last_name" type="text" placeholder="Lundin" required>
                             <span class="validation validation-last-name"></span>
                         </div>
                     </div>
 
                     <div class="input">
                         <label for="user_email">Email</label>
-                        <input id="user_email" name="user_email" type="email" placeholder="borje.lundin@mail.com" required onblur="validateEmail()">
+                        <input id="user_email" name="user_email" type="email" placeholder="borje.lundin@mail.com">
                         <span class="validation validation-email"></span>
                     </div>
                     
                     <div class="input">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="..." required onkeyup="validateMessage()" onblur="validateMessage()"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="..." required></textarea>
                         <span class="validation validation-message"></span>
                     </div>
                     
