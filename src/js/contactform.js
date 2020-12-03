@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 
-emailjs.init('user_fCTH9aMY7vGCzXlFmXEOH');
+emailjs.init(process.env.EMAILJS_KEY);
 
 const form = document.querySelector('.form-contact');
 const firstName = document.querySelector('#first_name');
