@@ -7,7 +7,7 @@ const firstName = document.querySelector('#first_name');
 const lastName = document.querySelector('#last_name');
 const email = document.querySelector('#user_email');
 const message = document.querySelector('#message');
-//form.addEventListener("submit", (event) => {sendEmail(event, form)})
+const gdpr = document.querySelector('#gdpr');
 
 firstName.addEventListener("blur", (event) => {validateFirstName(event)});
 lastName.addEventListener("blur", (event) => {validateLastName(event)});
@@ -80,9 +80,13 @@ const validateMessage = () => {
     }
 }
 
+const validateGDPR = () => {
+    return gdpr.checked ? true : false;
+}
+
 const validateForm = (event) => {
     event.preventDefault();
-    if (validateFirstName() && validateLastName() && validateEmail() && validateMessage()) {
+    if (validateFirstName() && validateLastName() && validateEmail() && validateMessage() && validateGDPR()) {
         sendEmail(form)
     }
 }

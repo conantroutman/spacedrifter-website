@@ -1786,6 +1786,10 @@ h2 {
   content: "Please enter a message.";
 }
 
+.validation-invalid.validation-gdpr::after {
+  content: "You must agree to our GDPR policy.";
+}
+
 .validation-valid {
   color: green;
 }

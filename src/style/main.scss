@@ -353,6 +353,9 @@ $hamburger-layer-color: #fff;
   }
 }
 
+.gdpr-check {
+}
+
 .validation {
   padding: 0.5rem 0;
   font-size: 0.75rem;
@@ -387,6 +390,9 @@ $hamburger-layer-color: #fff;
 
   &.validation-message::after {
     content: "Please enter a message.";
+  }
+  &.validation-gdpr::after {
+    content: "You must agree to our GDPR policy.";
   }
 }
 
