@@ -1620,6 +1620,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.release .album-type {
+  text-transform: capitalize;
+}
+
 .cover-image {
   width: 300px;
   height: 300px;
@@ -1627,14 +1631,19 @@ h2 {
   position: relative;
 }
 
-.cover-image img {
+.cover-image a {
+  width: inherit;
+  height: inherit;
+}
+
+.cover-image a img {
   width: inherit;
   height: inherit;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
-.cover-image:hover img {
+.cover-image:hover a img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

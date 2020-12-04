@@ -246,6 +246,10 @@ $hamburger-layer-color: #fff;
   iframe {
     margin-bottom: 1rem;
   }
+
+  .album-type {
+    text-transform: capitalize;
+  }
 }
 
 .cover-image {
@@ -254,14 +258,19 @@ $hamburger-layer-color: #fff;
   overflow: hidden;
   position: relative;
 
-  img {
+  a {
     width: inherit;
     height: inherit;
-    transition: 0.5s ease-in-out;
+
+    img {
+      width: inherit;
+      height: inherit;
+      transition: 0.5s ease-in-out;
+    }
   }
 
   &:hover {
-    img {
+    a img {
       transform: scale(1.1);
     }
   }

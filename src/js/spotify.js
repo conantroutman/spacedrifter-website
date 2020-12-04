@@ -9,7 +9,7 @@ const getSpotifyReleases = async () => {
                 const html = `
                 <div class="release">
                     <div class="cover-image">
-                        <img src="${item.images[0].url}"></img>
+                        <a href="${item.external_urls.spotify}" target="_blank" title="${item.name} on Spotify" ><img src="${item.images[0].url}"></img></a>
                     </div>
                     <iframe src="https://open.spotify.com/embed/album/${item.id}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     <h3 class="album-title">${item.name}</h3>
