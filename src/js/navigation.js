@@ -5,7 +5,17 @@ const navSlide = () => {
     burger.addEventListener('click', () => {
         burger.classList.toggle('is-active');
         nav.classList.toggle('navbar-active');
-        document.querySelector(body).style.overflowY = 'hidden';
+        //document.querySelector(body).style.overflowY = 'hidden';
     });
+
+    const navLinks = Array.from(document.querySelectorAll('.site-link'));
+    
+    navLinks.forEach(element => {
+        element.addEventListener('click', () => {
+            burger.classList.toggle('is-active');
+            nav.classList.toggle('navbar-active');
+        });
+    });
+
 }
 navSlide();
