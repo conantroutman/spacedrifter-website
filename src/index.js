@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import './style/main.css';
+import './style/main.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import Background from './images/Background.jpg';
