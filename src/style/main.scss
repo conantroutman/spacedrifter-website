@@ -281,6 +281,11 @@ $hamburger-layer-color: #fff;
   background: $color_background_light;
 }
 
+
+.bio {
+  margin-bottom: 2rem;
+}
+
 .members {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -308,10 +313,6 @@ $hamburger-layer-color: #fff;
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
-}
-
-.bio {
-  margin-bottom: 8rem;
 }
 
 // CONTACT
