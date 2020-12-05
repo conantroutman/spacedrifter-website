@@ -33,6 +33,10 @@ a {
   }
 }
 
+p {
+  line-height: 1.5;
+}
+
 h2,
 h3,
 h4 {
@@ -88,7 +92,6 @@ h2 {
 
 .section-text {
   padding: 2rem 0;
-  line-height: 1.5;
 }
 
 .header-section {
@@ -206,8 +209,8 @@ $hamburger-layer-color: #fff;
   font-family: "Abel", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
-  background: none;
-  border: 3px solid #fff;
+  background: $color_secondary;
+  //border: 3px solid #fff;
   text-align: center;
   padding: 1em 2em;
   transition: 0.2s ease-in-out;
@@ -220,9 +223,9 @@ $hamburger-layer-color: #fff;
   }
 
   &:hover {
-    background-color: $color_secondary;
-    border-color: $color_secondary;
-    color: #fff;
+    //background-color: $color_secondary;
+    //border-color: $color_secondary;
+    //color: #fff;
   }
 }
 
@@ -317,6 +320,19 @@ $hamburger-layer-color: #fff;
 }
 
 // CONTACT
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.submit-message {
+}
+
 .form-contact {
   display: flex;
   flex-direction: column;
