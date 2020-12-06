@@ -11,6 +11,7 @@ import './style/contact.scss';
 import './style/footer.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 
+import logo from './images/logo.svg';
 import Background from './images/Background.jpg';
 import pfpJohn from './images/pfp_john.jpg';
 import pfpAdam from './images/pfp_adam.jpg';

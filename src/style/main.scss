@@ -93,7 +93,8 @@ h2 {
   color: white;
   display: inline-block;
   padding: 1em 2em;
-  margin: 0 0.3em 0.3em 0;
+  //margin: 0 0.3em 0.3em 0;
+  margin-bottom: 1rem;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Abel", sans-serif;
@@ -118,15 +119,6 @@ h2 {
 }
 
 // TABLETS
-@media (max-width: 980px) {
-  .logo {
-    transform: scale(0.4);
-  }
-
-  .releases {
-    justify-content: center;
-  }
-}
 
 // PHONES
 @media (max-width: 480px) {

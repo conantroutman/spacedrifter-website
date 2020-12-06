@@ -14,18 +14,30 @@ lastName.addEventListener("blur", (event) => {validateLastName(event)});
 email.addEventListener("blur", (event) => {validateEmail(event)});
 message.addEventListener("blur", (event) => {validateMessage(event)});
 
+firstName.addEventListener("keyup", (event) => {validateFirstName(event)});
+lastName.addEventListener("keyup", (event) => {validateLastName(event)});
+email.addEventListener("keyup", (event) => {validateEmail(event)});
+message.addEventListener("keyup", (event) => {validateMessage(event)});
+
 form.addEventListener("submit", (event) => {validateForm(event)});
+
+const playAnimation = () => {
+    const button = form.querySelector('button');
+
+}
 
 const sendEmail = (form) => {
     // generate a five digit number for the contact_number variable
     form.contact_number.value = Math.random() * 100000 | 0;
+    playAnimation();
 
-    emailjs.sendForm('gmail', 'contact_form', form)
+    /*emailjs.sendForm('gmail', 'contact_form', form)
         .then(function() {
             console.log('SUCCESS!');
+            playAnimation();
         }, function(error) {
             console.log('FAILED...', error);
-        });
+        });*/
 
     form.reset();
 }

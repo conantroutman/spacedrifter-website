@@ -1,3 +1,23 @@
+@keyframes animateLogo {
+  from {
+    clip-path: circle(0%);
+  }
+
+  to {
+    clip-path: circle(50%);
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .showcase {
   position: absolute;
   left: 0;
@@ -14,6 +34,11 @@
     width: inherit;
     height: inherit;
     filter: brightness(0.6);
+    animation-name: fadeInImage;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    //animation-delay: 0.5s;
+    animation-fill-mode: both;
   }
 
   &::after {
@@ -30,6 +55,8 @@
 }
 
 .hero-content {
+  height: 80vh;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +65,18 @@
 
 .logo {
   //margin-bottom: 5rem;
-  transform: scale(0.6);
+  width: 20%;
+  min-width: 150px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   z-index: 3;
+  animation-name: animateLogo;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+@media (max-width: 480px) {
+  //.logo
 }
