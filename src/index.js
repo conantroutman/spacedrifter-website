@@ -1,10 +1,17 @@
 import _, { forEach } from 'lodash';
 
+import './style/variables.scss';
 import './style/main.scss';
+import './style/animations.scss';
+import './style/navbar.scss';
+import './style/hero.scss';
+import './style/music.scss';
+import './style/bio.scss';
+import './style/contact.scss';
+import './style/footer.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import Background from './images/Background.jpg';
-import Epbild from './images/Epbild 1.jpg';
 import pfpJohn from './images/pfp_john.jpg';
 import pfpAdam from './images/pfp_adam.jpg';
 

@@ -80,13 +80,9 @@ const validateMessage = () => {
     }
 }
 
-const validateGDPR = () => {
-    return gdpr.checked ? true : false;
-}
-
 const validateForm = (event) => {
     event.preventDefault();
-    if (validateFirstName() && validateLastName() && validateEmail() && validateMessage() && validateGDPR()) {
+    if (validateFirstName() && validateLastName() && validateEmail() && validateMessage()) {
         sendEmail(form)
     }
 }

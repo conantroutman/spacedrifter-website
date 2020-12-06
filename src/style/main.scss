@@ -3,10 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 // GENERAL
-
-$color_secondary: #4cb152;
-$color_background: #000;
-$color_background_light: rgb(15, 15, 15);
+@import "variables.scss";
 
 * {
   box-sizing: border-box;
@@ -29,7 +26,7 @@ a {
   transition: 0.2s ease-in-out;
 
   &:hover {
-    color: $color_secondary;
+    color: $color_green;
   }
 }
 
@@ -66,19 +63,14 @@ h2 {
 }
 
 .section-header {
-  //border-top: 2px solid $color_secondary;
-  //border-bottom: 2px solid $color_secondary;
+  //border-top: 2px solid $color_green;
+  //border-bottom: 2px solid $color_green;
 
   &::after {
     content: "";
     width: 100%;
-    border-bottom: 2px solid $color_secondary;
+    border-bottom: 2px solid $color_green;
   }
-}
-
-.email-link {
-  color: $color_secondary;
-  font-weight: bold;
 }
 
 .container {
@@ -86,12 +78,6 @@ h2 {
   width: 90%;
   margin: auto;
   position: relative;
-}
-
-.separator {
-  width: 100vw;
-  height: 20rem;
-  background-color: $color_secondary;
 }
 
 .section-text {
@@ -102,114 +88,8 @@ h2 {
   height: 80vh;
 }
 
-// NAVBAR
-.navbar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: absolute;
-  padding: 2rem 0;
-  box-sizing: border-box;
-  z-index: 3;
-  width: 100%;
-}
-
-.social-nav {
-  justify-self: end;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 12rem;
-
-  li {
-    list-style: none;
-  }
-
-  &.list-nav {
-    flex-direction: column;
-  }
-}
-
-.site-nav {
-  font-family: "Abel", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  min-width: 12rem;
-
-  li {
-    list-style: none;
-  }
-
-  &.list-nav {
-    flex-direction: column;
-  }
-}
-
-// Hamburger menu
-$hamburger-layer-color: #fff;
-@import "./hamburgers/hamburgers.scss";
-
-.burger {
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  top: 0;
-  right: -5vw;
-  z-index: 11;
-  display: none;
-  cursor: pointer;
-}
-
-// HERO
-.showcase {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-
-  .hero-image {
-    background-image: url("../images/Background.jpg");
-    background-position: center;
-    background-size: cover;
-    background-position-y: 40%;
-    width: inherit;
-    height: inherit;
-    filter: brightness(0.6);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 50%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6222689759497548) 43%, rgba(0, 0, 0, 0) 74%);
-    z-index: 2;
-  }
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  //margin-bottom: 5rem;
-  transform: scale(0.6);
-  z-index: 3;
-}
-
 .button {
-  background-color: $color_secondary;
+  background-color: $color_green;
   color: white;
   display: inline-block;
   padding: 1em 2em;
@@ -230,248 +110,10 @@ $hamburger-layer-color: #fff;
   }
 
   &:hover {
-    //background-color: $color_secondary;
-    //border-color: $color_secondary;
+    //background-color: $color_green;
+    //border-color: $color_green;
     color: #fff;
     filter: brightness(1.15);
-  }
-}
-
-// MUSIC
-.releases {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.release {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-
-  // Spotify player
-  iframe {
-    margin-bottom: 1rem;
-  }
-
-  .album-type {
-    text-transform: capitalize;
-  }
-}
-
-.cover-image {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-
-  a {
-    width: inherit;
-    height: inherit;
-
-    img {
-      width: inherit;
-      height: inherit;
-      transition: 0.5s ease-in-out;
-    }
-  }
-
-  &:hover {
-    a img {
-      transform: scale(1.1);
-    }
-  }
-}
-
-// ABOUT
-.about-section {
-  background: $color_background_light;
-}
-
-.bio {
-  margin-bottom: 2rem;
-}
-
-.members {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
-  row-gap: 3rem;
-  margin-top: 4rem;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.member {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  img {
-    max-width: 200px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: $color_secondary;
-  }
-}
-
-// CONTACT
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 2rem;
-
-  p {
-    margin-bottom: 2rem;
-  }
-}
-
-.submit-message {
-}
-
-.form-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  button {
-    margin-top: 1rem;
-    max-width: 33%;
-  }
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  position: relative;
-
-  label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    font-family: "Abel", sans-serif;
-    text-transform: uppercase;
-  }
-
-  input,
-  textarea,
-  select {
-    padding: 1rem;
-    font-size: 18px;
-  }
-
-  textarea {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-  }
-}
-
-.input-group-name {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-
-  .input {
-    width: calc(50% - 0.5rem);
-  }
-}
-
-.gdpr-check {
-}
-
-.validation {
-  padding: 0.5rem 0;
-  font-size: 0.75rem;
-}
-
-.validation-invalid {
-  color: red;
-
-  &::before {
-    //color: red;
-    //position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f057";
-    padding-right: 0.25rem;
-    //position: absolute;
-    //top: 25px;
-    //right: 0;
-  }
-
-  &.validation-first-name::after {
-    content: "Please enter your first name.";
-  }
-
-  &.validation-last-name::after {
-    content: "Please enter your last name.";
-  }
-
-  &.validation-email::after {
-    content: "Please enter a valid email address.";
-  }
-
-  &.validation-message::after {
-    content: "Please enter a message.";
-  }
-  &.validation-gdpr::after {
-    content: "You must agree to our GDPR policy.";
-  }
-}
-
-.validation-valid {
-  color: green;
-
-  &::before {
-    //color: red;
-    //position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f058";
-    padding-right: 0.25rem;
-    //position: absolute;
-    //top: 0;
-    //right: 0;
-  }
-}
-
-.contact-text {
-  padding: 2rem 0;
-}
-
-// FOOTER
-
-.footer {
-  background: $color_background_light;
-  padding: 3rem 0 1rem 0;
-
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    .credits {
-      font-size: 0.75rem;
-      opacity: 0.75;
-      margin-top: 2rem;
-      text-align: center;
-
-      p {
-        margin-top: 0.5rem;
-      }
-    }
   }
 }
 
@@ -488,81 +130,7 @@ $hamburger-layer-color: #fff;
 
 // PHONES
 @media (max-width: 480px) {
-  .navbar {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    z-index: 10;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(100%);
-    transition: 0.3s ease-in-out;
-
-    .site-nav {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 80%;
-      font-size: 2rem;
-    }
-
-    .social-nav {
-      //display: none;
-      font-size: 2rem;
-      width: 90%;
-    }
-
-    ul {
-      li {
-        opacity: 0;
-      }
-    }
-  }
-
-  .navbar-active {
-    transform: translateX(0%);
-  }
-
-  .burger {
-    display: block;
-  }
-
   .button {
     min-width: 100%;
-  }
-
-  .members {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .member {
-    img {
-      max-width: 150px;
-    }
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-
-    .form-contact {
-      max-width: 90vw;
-    }
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

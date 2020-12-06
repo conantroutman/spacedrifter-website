@@ -1,0 +1,136 @@
+@import "variables.scss";
+
+.email-link {
+  color: $color_green;
+  font-weight: bold;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.submit-message {
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  button {
+    max-width: 33%;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: "Abel", sans-serif;
+    text-transform: uppercase;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 1rem;
+    font-size: 18px;
+  }
+
+  textarea {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+}
+
+.input-group-name {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  .input {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+.validation {
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
+.validation-invalid {
+  color: red;
+
+  &::before {
+    //color: red;
+    //position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f057";
+    padding-right: 0.25rem;
+    //position: absolute;
+    //top: 25px;
+    //right: 0;
+  }
+
+  &.validation-first-name::after {
+    content: "Please enter your first name.";
+  }
+
+  &.validation-last-name::after {
+    content: "Please enter your last name.";
+  }
+
+  &.validation-email::after {
+    content: "Please enter a valid email address.";
+  }
+
+  &.validation-message::after {
+    content: "Please enter a message.";
+  }
+  &.validation-gdpr::after {
+    content: "You must agree to our GDPR policy.";
+  }
+}
+
+.validation-valid {
+  color: green;
+
+  &::before {
+    //color: red;
+    //position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058";
+    padding-right: 0.25rem;
+    //position: absolute;
+    //top: 0;
+    //right: 0;
+  }
+}
+
+.contact-text {
+  padding: 2rem 0;
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    .form-contact {
+      max-width: 90vw;
+    }
+  }
+}

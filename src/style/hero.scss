@@ -1,0 +1,43 @@
+.showcase {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+
+  .hero-image {
+    background-image: url("../images/Background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: 40%;
+    width: inherit;
+    height: inherit;
+    filter: brightness(0.6);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 50%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6222689759497548) 43%, rgba(0, 0, 0, 0) 74%);
+    z-index: 2;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  //margin-bottom: 5rem;
+  transform: scale(0.6);
+  z-index: 3;
+}

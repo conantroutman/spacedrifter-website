@@ -4,7 +4,6 @@
   position: absolute;
   padding: 2rem 0;
   box-sizing: border-box;
-
   z-index: 3;
   width: 100%;
 }
@@ -14,7 +13,7 @@
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 12rem;
 
   li {
     list-style: none;
@@ -32,7 +31,8 @@
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
+  min-width: 12rem;
 
   li {
     list-style: none;
@@ -41,6 +41,21 @@
   &.list-nav {
     flex-direction: column;
   }
+}
+
+// Hamburger menu
+$hamburger-layer-color: #fff;
+@import "./hamburgers/hamburgers.scss";
+
+.burger {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  right: -5vw;
+  z-index: 11;
+  display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
@@ -56,24 +71,34 @@
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
+    transition: 0.3s ease-in-out;
 
     .site-nav {
       flex-direction: column;
-      justify-content: space-evenly;
       align-items: center;
-      font-size: 3rem;
-      height: 400px;
+      justify-content: space-evenly;
+      height: 80%;
+      font-size: 2rem;
     }
 
     .social-nav {
-      display: none;
+      //display: none;
+      font-size: 2rem;
+      width: 90%;
     }
 
     ul {
       li {
         opacity: 0;
-        transition: all 0.2s;
       }
     }
+  }
+
+  .navbar-active {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
   }
 }
