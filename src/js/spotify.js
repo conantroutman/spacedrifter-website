@@ -1,8 +1,7 @@
-import ScrollReveal from 'scrollreveal';
-
+import { setScrollReveal } from './animation';
 const url = 'https://spacedrifter-backend.herokuapp.com/api/v1/spotify';
 
-const getSpotifyReleases = async () => {
+export const getSpotifyReleases = async () => {
     const element = document.querySelector(".releases");
     await fetch(url)
         .then(response => response.json())
@@ -20,16 +19,10 @@ const getSpotifyReleases = async () => {
                 </div>
                 `;
                 element.innerHTML += html;
-                ScrollReveal().sync();
             });
+            setScrollReveal(document.querySelectorAll('.release'), true);
         })
         .catch((error) => {
             document.querySelector(".music-section").style.display = "none";
         })
 }
-
-const setLatestRelease = () => {
-    
-}
-
-getSpotifyReleases();

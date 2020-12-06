@@ -218,7 +218,7 @@ $hamburger-layer-color: #fff;
   text-decoration: none;
   font-family: "Abel", sans-serif;
   font-size: 1.2em;
-  font-weight: 300;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -500,7 +500,7 @@ $hamburger-layer-color: #fff;
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     .site-nav {
       flex-direction: column;
@@ -514,6 +514,12 @@ $hamburger-layer-color: #fff;
       //display: none;
       font-size: 2rem;
       width: 90%;
+    }
+
+    ul {
+      li {
+        opacity: 0;
+      }
     }
   }
 
@@ -541,9 +547,22 @@ $hamburger-layer-color: #fff;
 
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 4rem;
 
     .form-contact {
       max-width: 90vw;
     }
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

@@ -134,49 +134,49 @@
             <div class="container">
                 <h2 class="section-header">Get in Touch</h2>
                 <div class="contact-grid">
-                    <article>
-                        <p>Want to ask us a question? The best way to contact us is by emailing us directly at <a class="email-link" href="mailto:contact@spacedrifter.band">contact@spacedrifter.band</a></p>
+                    <article class="contact-grid-item">
+                        <p>Want to ask us a question? The best way to contact us is by emailing us directly at <a class="email-link" href="mailto:contact@spacedrifter.band">contact@spacedrifter.band</a>, or by using the contact form on this website.</p>
                         <p>You can also reach us by sending us a private message on either of our social media pages.</p>
                         <a href="https://m.me/spacedrifterband" target="_blank" class="button"><i class="fab fab fa-facebook"></i>Message us on Facebook</a>
                     </article>
                     
-                <form class="form-contact" action="">
-                    <div class="submit-message"></div>
-                    <input type="hidden" name="contact_number">
-                    <div class="input-group-name">
+                    <form class="form-contact contact-grid-item" action="">
+                        <div class="submit-message"></div>
+                        <input type="hidden" name="contact_number">
+                        <div class="input-group-name">
+                            <div class="input">
+                                <label for="first_name">First Name</label>
+                                <input id="first_name" name="first_name" type="text" placeholder="Börje" required>
+                                <span class="validation validation-first-name"></span>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="last_name">Last Name</label>
+                                <input id="last_name" name="last_name" type="text" placeholder="Lundin" required>
+                                <span class="validation validation-last-name"></span>
+                            </div>
+                        </div>
+
                         <div class="input">
-                            <label for="first_name">First Name</label>
-                            <input id="first_name" name="first_name" type="text" placeholder="Börje" required>
-                            <span class="validation validation-first-name"></span>
+                            <label for="user_email">Email</label>
+                            <input id="user_email" name="user_email" type="email" placeholder="borje.lundin@mail.com" required>
+                            <span class="validation validation-email"></span>
                         </div>
                         
                         <div class="input">
-                            <label for="last_name">Last Name</label>
-                            <input id="last_name" name="last_name" type="text" placeholder="Lundin" required>
-                            <span class="validation validation-last-name"></span>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="..." required></textarea>
+                            <span class="validation validation-message"></span>
                         </div>
-                    </div>
 
-                    <div class="input">
-                        <label for="user_email">Email</label>
-                        <input id="user_email" name="user_email" type="email" placeholder="borje.lundin@mail.com" required>
-                        <span class="validation validation-email"></span>
-                    </div>
-                    
-                    <div class="input">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="..." required></textarea>
-                        <span class="validation validation-message"></span>
-                    </div>
-
-                    <div class="gdpr-check">
-                        <input type="checkbox" name="gdpr" id="gdpr" required>
-                        <label for="gdpr">I agree with the handling of my data bla bla bla</label>
-                        <span class="validation validation-gdpr"></span>
-                    </div>
-                    
-                    <button class="button" type="submit">Submit</button>
-                </form>
+                        <div class="gdpr-check">
+                            <input type="checkbox" name="gdpr" id="gdpr" required>
+                            <label for="gdpr">I agree with the handling of my data bla bla bla</label>
+                            <span class="validation validation-gdpr"></span>
+                        </div>
+                        
+                        <button class="button" type="submit"><i class="fas fa-paper-plane"></i>Send</button>
+                    </form>
                 </div>
             </div>
         </section>
