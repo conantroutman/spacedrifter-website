@@ -37,6 +37,10 @@ p {
   line-height: 1.5;
 }
 
+button {
+  border: none;
+}
+
 h2,
 h3,
 h4 {
@@ -205,17 +209,20 @@ $hamburger-layer-color: #fff;
 }
 
 .button {
-  color: #fff;
-  font-family: "Abel", sans-serif;
-  text-transform: uppercase;
-  font-size: 22px;
-  background: $color_secondary;
-  //border: 3px solid #fff;
-  text-align: center;
+  background-color: $color_secondary;
+  color: white;
+  display: inline-block;
   padding: 1em 2em;
-  transition: 0.2s ease-in-out;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Abel", sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
   z-index: 3;
 
   i {
@@ -225,7 +232,8 @@ $hamburger-layer-color: #fff;
   &:hover {
     //background-color: $color_secondary;
     //border-color: $color_secondary;
-    //color: #fff;
+    color: #fff;
+    filter: brightness(1.15);
   }
 }
 
@@ -283,7 +291,6 @@ $hamburger-layer-color: #fff;
 .about-section {
   background: $color_background_light;
 }
-
 
 .bio {
   margin-bottom: 2rem;
@@ -529,6 +536,14 @@ $hamburger-layer-color: #fff;
   .member {
     img {
       max-width: 150px;
+    }
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    .form-contact {
+      max-width: 90vw;
     }
   }
 }
