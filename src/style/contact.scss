@@ -19,23 +19,6 @@
   }
 }
 
-.submit-message {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  font-size: 4rem;
-}
-
 .form-contact {
   display: flex;
   flex-direction: column;
@@ -44,6 +27,7 @@
   button {
     max-width: 33%;
     position: relative;
+    overflow: hidden;
   }
 }
 
@@ -155,12 +139,22 @@
   }
 }
 
-@keyframes submitAnim {
+@keyframes submitFadeOut {
   from {
-    opacity: 1;
+    color: white;
   }
 
   to {
-    opacity: 0;
+    color: transparent;
+  }
+}
+
+@keyframes submitFadeIn {
+  from {
+    color: transparent;
+  }
+
+  to {
+    color: white;
   }
 }

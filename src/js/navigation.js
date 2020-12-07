@@ -7,8 +7,6 @@ const navAnimation = () => {
     const socialLinks = document.querySelector('.social-nav').querySelectorAll('li');
     const direction = (isHamburgerOpen ? 'forwards' : 'backwards');
 
-    console.log( nav)
-
     siteLinks.forEach((link, index) => {
         link.style.animation ? link.style.animation = '' : link.style.animation = `navLinkFade 0.5s ease ${ index / 7 +  0.3 }s ${direction}`;
     })

@@ -21,25 +21,44 @@ message.addEventListener("keyup", (event) => {validateMessage(event)});
 
 form.addEventListener("submit", (event) => {validateForm(event)});
 
-const playAnimation = () => {
+const playSubmitAnimation = (isSuccess) => {
     const button = form.querySelector('button');
+    const defaultText = button.innerHTML;
+    const successText = `<i class="fas fa-check"></i>Message Sent!`;
+    const errorText = `Please try again!`;
+    const newText = (isSuccess ? successText : errorText);
 
+
+    button.disabled = 'true';
+    button.style.animation = 'submitFadeOut 0.5s ease both';
+    setTimeout(function(){
+        button.innerHTML = newText;
+        button.style.animation = 'submitFadeIn 0.5s ease both';
+    }, 500);
+    setTimeout(function(){
+        button.style.animation = 'submitFadeOut 0.5s ease both';
+    }, 1500);
+    setTimeout(function(){
+        button.innerHTML = defaultText;
+        button.style.animation = 'submitFadeIn 0.5s ease both';
+    }, 2000);
+    button.disabled = 'false';
 }
 
 const sendEmail = (form) => {
     // generate a five digit number for the contact_number variable
     form.contact_number.value = Math.random() * 100000 | 0;
-    playAnimation();
+    
 
-    /*emailjs.sendForm('gmail', 'contact_form', form)
+    emailjs.sendForm('gmail', 'contact_form', form)
         .then(function() {
             console.log('SUCCESS!');
-            playAnimation();
+            form.reset();
+            playSubmitAnimation(true);
         }, function(error) {
             console.log('FAILED...', error);
-        });*/
-
-    form.reset();
+            playSubmitAnimation(false);
+        });
 }
 
 
