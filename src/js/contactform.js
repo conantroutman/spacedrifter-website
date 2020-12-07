@@ -7,7 +7,7 @@ const firstName = document.querySelector('#first_name');
 const lastName = document.querySelector('#last_name');
 const email = document.querySelector('#user_email');
 const message = document.querySelector('#message');
-const gdpr = document.querySelector('#gdpr');
+const button = form.querySelector('button');
 
 firstName.addEventListener("blur", (event) => {validateFirstName(event)});
 lastName.addEventListener("blur", (event) => {validateLastName(event)});
@@ -22,7 +22,6 @@ message.addEventListener("keyup", (event) => {validateMessage(event)});
 form.addEventListener("submit", (event) => {validateForm(event)});
 
 const playSubmitAnimation = (isSuccess) => {
-    const button = form.querySelector('button');
     const defaultText = button.innerHTML;
     const successText = `<i class="fas fa-check"></i>Message Sent!`;
     const errorText = `Please try again!`;
@@ -49,15 +48,18 @@ const sendEmail = (form) => {
     // generate a five digit number for the contact_number variable
     form.contact_number.value = Math.random() * 100000 | 0;
     
+    button.disabled = 'true';
 
     emailjs.sendForm('gmail', 'contact_form', form)
         .then(function() {
             console.log('SUCCESS!');
             form.reset();
             playSubmitAnimation(true);
+            button.disabled = 'false';
         }, function(error) {
             console.log('FAILED...', error);
             playSubmitAnimation(false);
+            button.disabled = 'false';
         });
 }
 
