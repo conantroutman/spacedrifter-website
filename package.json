@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "build": "webpack --mode=production",
+    "build:analyze": "npm run build -- --env.addons=bundleanalyzer"
   },
   "repository": {
     "type": "git",
@@ -31,11 +33,13 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.9.0",
+    "webpack-bundle-analyzer": "^4.2.0",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "emailjs-com": "^2.6.4",
+    "image-webpack-loader": "^7.0.1",
     "lodash": "^4.17.20",
     "node-sass": "^5.0.0",
     "rellax": "^1.12.1",

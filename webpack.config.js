@@ -1,12 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -46,9 +49,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      favicon: 'src/images/favicon.png',
       minify: true,
     }),
     new Dotenv(),
-    new MiniCssExtractPlugin()
-  ]
+    new MiniCssExtractPlugin(),
+    new BundleAnalyzerPlugin()
+  ],
+  optimization: {
+
+    usedExports: true,
+ 
+  },
 };

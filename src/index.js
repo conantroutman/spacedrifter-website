@@ -1,5 +1,4 @@
-import _, { forEach } from 'lodash';
-
+import './fontello/css/fontello-embedded.css';
 import './style/variables.scss';
 import './style/main.scss';
 import './style/animations.scss';
@@ -9,17 +8,17 @@ import './style/music.scss';
 import './style/bio.scss';
 import './style/contact.scss';
 import './style/footer.scss';
-import '@fortawesome/fontawesome-free/css/all.css';
 
 import logo from './images/logo.svg';
 import Background from './images/Background.jpg';
 import pfpJohn from './images/pfp_john.jpg';
 import pfpAdam from './images/pfp_adam.jpg';
 
+import { setScrollReveal } from './js/animation';
 import { contactform } from './js/contactform';
 import { getSpotifyReleases } from './js/spotify';
 import { navigation } from './js/navigation';
-import { setScrollReveal } from './js/animation';
+
 
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll'

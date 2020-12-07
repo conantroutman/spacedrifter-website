@@ -10,10 +10,6 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 2rem;
 
-  p {
-    margin-bottom: 2rem;
-  }
-
   article {
     position: relative;
   }
@@ -79,9 +75,9 @@
   &::before {
     //color: red;
     //position: absolute;
-    font-family: "Font Awesome 5 Free";
+    font-family: "fontello";
     font-weight: 900;
-    content: "\f057";
+    content: "\e802";
     padding-right: 0.25rem;
     //position: absolute;
     //top: 25px;
@@ -103,9 +99,6 @@
   &.validation-message::after {
     content: "Please enter a message.";
   }
-  &.validation-gdpr::after {
-    content: "You must agree to our GDPR policy.";
-  }
 }
 
 .validation-valid {
@@ -114,9 +107,9 @@
   &::before {
     //color: red;
     //position: absolute;
-    font-family: "Font Awesome 5 Free";
+    font-family: "fontello";
     font-weight: 900;
-    content: "\f058";
+    content: "\e800";
     padding-right: 0.25rem;
     //position: absolute;
     //top: 0;
