@@ -32,6 +32,6 @@ const scroll = new SmoothScroll('a[href*="#"]');
 getSpotifyReleases(ScrollReveal)
 
 setScrollReveal(document.querySelectorAll('.release'), true);
-setScrollReveal(document.querySelectorAll('.section-text'), false);
+setScrollReveal(document.querySelectorAll('.bio'), false);
 setScrollReveal(document.querySelectorAll('.member'), true);
 setScrollReveal(document.querySelectorAll('.contact-grid-item'), true);
