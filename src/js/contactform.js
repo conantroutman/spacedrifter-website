@@ -55,6 +55,7 @@ const sendEmail = (form) => {
             console.log('SUCCESS!');
             form.reset();
             playSubmitAnimation(true);
+            resetValidation();
             button.disabled = 'false';
         }, function(error) {
             console.log('FAILED...', error);
@@ -128,4 +129,13 @@ const setValidationMessage = (element, isValid) => {
         element.parentElement.querySelector('.validation').classList.remove('validation-invalid');
         element.parentElement.querySelector('.validation').classList.add('validation-valid');
     }
+}
+
+const resetValidation = () => {
+    const elements = document.querySelectorAll('.validation');
+
+    elements.forEach((element) => {
+        element.classList.remove('validation-valid');
+        element.classList.remove('validation-invalid');
+    })
 }
