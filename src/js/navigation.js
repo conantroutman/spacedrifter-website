@@ -9,22 +9,48 @@ const navAnimation = () => {
 
     siteLinks.forEach((link, index) => {
         link.style.animation ? link.style.animation = '' : link.style.animation = `navLinkFade 0.5s ease ${ index / 7 +  0.3 }s ${direction}`;
+        console.log(link.style.animation)
     })
 
     socialLinks.forEach((link, index) => {
-        const fuck = siteLinks.length / 7 + nav.style.transition;
         link.style.animation ? link.style.animation = '' : link.style.animation = `navLinkFade 0.5s ease ${ (socialLinks.length - index) / 14 + ( 0.3 + 0.5) }s ${direction}`;
     })
 }
 
+const clearAnimation = () => {
+    const siteLinks = document.querySelector('.site-nav').querySelectorAll('li');
+    const socialLinks = document.querySelector('.social-nav').querySelectorAll('li');
+
+    siteLinks.forEach((link) => {
+        link.style.animation = ''
+    })
+
+    socialLinks.forEach((link) => {
+        link.style.animation = ''
+    })
+}
+
+const openMenu = () => {
+    console.log("Opening")
+    // Prevent scrolling when menu is open
+    document.querySelector('body').style.overflowY = 'hidden';
+    burger.classList.add('is-active');
+    nav.classList.add('navbar-active');
+    navAnimation();
+}
+
+const closeMenu = () => {
+    console.log("Closing")
+    document.querySelector('body').style.overflowY = 'scroll';
+    burger.classList.remove('is-active');
+    nav.classList.remove('navbar-active');
+    clearAnimation();
+}
+
 const toggleMenu = () => {
     isHamburgerOpen = !isHamburgerOpen;
-    // Prevent scrolling when menu is open
-    isHamburgerOpen ? document.querySelector('body').style.overflowY = 'hidden' : document.querySelector('body').style.overflowY = 'scroll';
-    burger.classList.toggle('is-active');
-    nav.classList.toggle('navbar-active');
+    isHamburgerOpen ? openMenu() : closeMenu();
     
-    navAnimation();
 }
 
 const navSlide = () => {
@@ -36,7 +62,8 @@ const navSlide = () => {
     
     siteLinks.forEach(element => {
         element.addEventListener('click', () => {
-            toggleMenu();
+            isHamburgerOpen = false;
+            closeMenu();
         });
     });
 }
