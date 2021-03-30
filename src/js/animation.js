@@ -1,7 +1,7 @@
 import ScrollReveal from 'scrollreveal';
 
 const distance = '24px';
-ScrollReveal({ reset: true });
+ScrollReveal({ reset: false });
 
 export const setScrollReveal = (element, isStaggered) => {
     let delayOffset;
@@ -10,7 +10,7 @@ export const setScrollReveal = (element, isStaggered) => {
         ScrollReveal().reveal(item, {
             delay: delayOffset * (index - 1),
             distance: distance,
-            easing: 'ease-in'
+            easing: 'ease-in',
         });
     })
 }
