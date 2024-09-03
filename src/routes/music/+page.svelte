@@ -2,15 +2,7 @@
 	import Container from '$lib/Container.svelte';
 	import MusicReleases from '$lib/MusicReleases.svelte';
 	import Section from '$lib/Section.svelte';
-	import SpotifyEmbed from '$lib/SpotifyEmbed.svelte';
-	import WhenTheColorsFade from '$lib/WhenTheColorsFade.svelte';
 </script>
-
-<Section>
-	<Container>
-		<WhenTheColorsFade />
-	</Container>
-</Section>
 
 <Section>
 	<Container>
