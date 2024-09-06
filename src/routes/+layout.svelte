@@ -2,6 +2,7 @@
 	import Footer from '$lib/Footer.svelte';
 	import Logo from '$lib/Logo.svelte';
 	import Navigation from '$lib/Navigation.svelte';
+	import PageHeader from '$lib/PageHeader.svelte';
 	import '../main.css';
 </script>
 
@@ -10,10 +11,7 @@
 </svelte:head>
 
 <div class="container">
-	<header>
-		<a href="/" class="logo"><Logo /></a>
-		<Navigation />
-	</header>
+	<PageHeader />
 
 	<main>
 		<slot />
@@ -29,27 +27,8 @@
 		min-height: 100vh;
 	}
 
-	header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		position: sticky;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 10;
-		padding: 1rem;
-		background-color: white;
-	}
-
 	main {
 		box-sizing: border-box;
 		flex: 1;
-	}
-
-	.logo {
-		fill: black;
-		width: 400px;
 	}
 </style>

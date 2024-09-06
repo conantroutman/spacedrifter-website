@@ -1,5 +1,24 @@
+:root {
+	--wtcf-gradient: linear-gradient(
+		90deg,
+		rgba(65, 40, 74, 1) 0%,
+		rgba(162, 49, 90, 1) 50%,
+		rgba(255, 158, 70, 1) 100%
+	);
+}
+
+html {
+	font-size: 18px;
+	font-family: 'SUSE', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
+
+	background-color: #000;
+	color: #fff;
 }
 
 .righteous-regular {

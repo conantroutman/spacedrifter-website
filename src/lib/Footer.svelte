@@ -7,22 +7,24 @@
 
 <footer>
 	<nav>
-		<a href="https://instagram.com/spacedrifterband" target="_blank">
+		<a href="https://instagram.com/spacedrifterband" target="_blank" title="Facebook">
 			<InstagramIcon />
 		</a>
-		<a href="https://instagram.com/spacedrifterband" target="_blank">
+		<a href="https://instagram.com/spacedrifterband" target="_blank" title="Instagram">
 			<FacebookIcon />
 		</a>
-		<a href="https://spacedrifterband.bandcamp.com" target="_blank">
+		<a href="https://spacedrifterband.bandcamp.com" target="_blank" title="Bandcamp">
 			<BandcampIcon />
 		</a>
 		<a
 			href="https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=9JJXwJB1TIq0nZ3a3ey9Qg"
 			target="_blank"
+			title="Spotify"
 		>
 			<SpotifyIcon />
 		</a>
 	</nav>
+	<div class="shameless-self-promotion">Website created by John Söderberg</div>
 </footer>
 
 <style>
@@ -37,7 +39,10 @@
 		/* left: 0; */
 		/* right: 0; */
 		padding: 1rem;
-		background-color: white;
+		background-color: #000;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	footer::before {
@@ -66,5 +71,11 @@
 
 	a:hover {
 		transform: scale(1.1);
+	}
+
+	.shameless-self-promotion {
+		margin: auto;
+		font-size: 0.85rem;
+		margin-top: 1rem;
 	}
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/Container.svelte';
+	import Heading from '$lib/Heading.svelte';
 	import Section from '$lib/Section.svelte';
 	import { gigs } from './data';
 	import Gig from './Gig.svelte';
@@ -14,7 +15,7 @@
 	<Section>
 		<Container>
 			<div class="heading">
-				<h2>Future Gigs</h2>
+				<Heading level={2}>Future Gigs</Heading>
 				<p>Look towards the future!</p>
 			</div>
 
@@ -31,7 +32,7 @@
 	<Section>
 		<Container>
 			<div class="heading">
-				<h2>Past Gigs</h2>
+				<Heading level={2}>Past Gigs</Heading>
 				<p>You can't change the past man...</p>
 			</div>
 
@@ -45,11 +46,6 @@
 {/if}
 
 <style>
-	h2 {
-		font-size: 2rem;
-		margin: 0;
-	}
-
 	.heading {
 		text-align: center;
 		margin-bottom: 4rem;
@@ -60,8 +56,6 @@
 		padding-left: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
-		font-size: 20px;
 		text-transform: uppercase;
 	}
 </style>

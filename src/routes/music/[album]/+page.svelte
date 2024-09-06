@@ -4,34 +4,39 @@
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import Container from '$lib/Container.svelte';
 	import { getReleaseTypeName } from '$lib/utils';
+	import TrackList from './TrackList.svelte';
+	import { page } from '$app/stores';
+	import AlbumCover from '$lib/AlbumCover.svelte';
+	import LinkList from './LinkList.svelte';
+	import Heading from '$lib/Heading.svelte';
 
 	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>{data.name}</title>
+	<title>{data.name} | Spacedrifter</title>
 </svelte:head>
 
-<Breadcrumbs />
-
 <Container>
+	<Breadcrumbs />
 	<div class="container">
-		<Spotify spotifyLink={data.links.spotify} width="100%" />
+		<div class="left">
+			<AlbumCover id={$page.params.album} />
+			<Spotify spotifyLink={data.links.spotify} width="100%" />
+		</div>
 
 		<div class="details">
-			<div class="cover">
-				<img src={``} alt="" />
-			</div>
-			<h1>{data.name}</h1>
-			<div>{getReleaseTypeName(data.type)}</div>
-			<div>
+			<Heading>{data.name}</Heading>
+			<div class="type">{getReleaseTypeName(data.type)}</div>
+			<div class="date">
 				Release Date: {data.releaseDate.toLocaleDateString(undefined, {
 					day: '2-digit',
 					month: 'long',
 					year: 'numeric'
 				})}
 			</div>
-			<div></div>
+			<TrackList data={data.trackList} />
+			<LinkList data={data.links} />
 		</div>
 	</div>
 </Container>
@@ -41,5 +46,16 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+	}
+
+	.left {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.type {
+		font-weight: 600;
+		font-size: 1.2rem;
 	}
 </style>

@@ -8,6 +8,7 @@ export interface MusicRelease {
 		apple?: string;
 		bandcamp?: string;
 	};
+	trackList: string[];
 }
 
 export const music: { [id: string]: MusicRelease } = {
@@ -17,7 +18,19 @@ export const music: { [id: string]: MusicRelease } = {
 		type: 'album',
 		links: {
 			spotify: 'album/1KlxdWlt5UHHKhsLbnYeT5?si=uNk4GlaQRTCkb-KJE1wgQA'
-		}
+		},
+		trackList: [
+			'Dwell',
+			'Thousand Days',
+			'The Old Holds',
+			'(Radio Edit)',
+			'Have a Girl',
+			'Spellbound',
+			'Buried in Stone',
+			'Through the Desert',
+			'NFOB',
+			'When the Colors Fade'
+		]
 	},
 	spacedrifter: {
 		name: 'Spacedrifter',
@@ -25,7 +38,14 @@ export const music: { [id: string]: MusicRelease } = {
 		type: 'ep',
 		links: {
 			spotify: 'album/2Jjmg5YDVd9B49E7Wc7OdT?si=uMqD4b9TRHSkscfEY5Y6lA'
-		}
+		},
+		trackList: [
+			'Artificial Ignorance',
+			'The Room That I Cursed',
+			'Perpetuum Mobile',
+			'Maroon',
+			'Farewell'
+		]
 	},
 	'cabin-fever': {
 		name: 'Cabin Fever',
@@ -33,6 +53,7 @@ export const music: { [id: string]: MusicRelease } = {
 		type: 'single',
 		links: {
 			spotify: 'album/5KAWeDP3sSPt7C1nn3UDEM?si=48jD0Gu8S_u-b34p6V9urg'
-		}
+		},
+		trackList: ['Cabin Fever']
 	}
-};
+} as const;

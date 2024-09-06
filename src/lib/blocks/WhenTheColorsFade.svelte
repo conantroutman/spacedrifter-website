@@ -1,14 +1,15 @@
 <script>
-	import Button from './Button.svelte';
+	import Button from '../Button.svelte';
+	import Heading from '../Heading.svelte';
 </script>
 
 <div class="query">
 	<div class="container">
 		<div class="cover">
-			<img src="https://f4.bcbits.com/img/a0275814556_16.jpg" alt="When the Colors Fade" />
+			<img src="vinyl.png" alt="When the Colors Fade" loading="lazy" />
 		</div>
 		<div class="cta">
-			<h2>Debut LP "When the Colors Fade" Out Now!</h2>
+			<Heading level={2} centered>Debut LP "When the Colors Fade" Out Now!</Heading>
 			<div class="buttons">
 				<Button fullWidth href="https://spacedrifterband.bandcamp.com/album/when-the-colors-fade"
 					>Buy Vinyl</Button

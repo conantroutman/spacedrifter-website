@@ -1,12 +1,21 @@
 <script lang="ts">
+	import Button from '$lib/Button.svelte';
+	import Heading from '$lib/Heading.svelte';
 	import type { Gig } from './data';
 
 	export let gig: Gig;
 
-	function formatDate(date: Date) {
+	function getDate(date: Date) {
 		const options: Intl.DateTimeFormatOptions = {
 			day: '2-digit',
-			month: 'short',
+			month: 'short'
+		};
+
+		return date.toLocaleDateString(undefined, options);
+	}
+
+	function getYear(date: Date) {
+		const options: Intl.DateTimeFormatOptions = {
 			year: 'numeric'
 		};
 
@@ -15,21 +24,33 @@
 </script>
 
 <li>
-	<div class="gig">
-		<div class="">
-			{formatDate(gig.date)}
+	<div class="container">
+		<div class="date">
+			<span>{getDate(gig.date)}</span>
+			<span>{getYear(gig.date)}</span>
 		</div>
-		<div class="gig-details">
-			<h3 class="gig-name">
-				{gig.name}
-			</h3>
-			<div>
-				{#if gig.venue}
-					{gig.venue},
-				{/if}
-				{gig.location}
+		<div class="body">
+			<div class="details">
+				<Heading level={4}>{gig.name}</Heading>
+				<div class="location">
+					{#if gig.venue}
+						{gig.venue},
+					{/if}
+					{gig.location}
+				</div>
 			</div>
 		</div>
+		{#if gig.link}
+			<div class="button-container">
+				<Button href={gig.link.href} fullWidth>
+					{#if gig.link.type === 'info'}
+						Info
+					{:else if gig.link.type === 'tickets'}
+						Tickets
+					{/if}
+				</Button>
+			</div>
+		{/if}
 	</div>
 </li>
 
@@ -39,24 +60,46 @@
 		container-type: inline-size;
 	}
 
-	.gig {
+	.container {
 		display: grid;
-		grid-template-columns: 120px 1fr;
+		grid-template-columns: 240px 1fr 200px;
 		gap: 2rem;
+		border-bottom: 1px solid black;
+		padding: 1.5rem 0;
+	}
+
+	.date {
+		font-size: 1.25rem;
 		font-family: 'Righteous', sans-serif;
 	}
 
-	.gig-details {
+	.date > span:first-of-type {
+		font-size: 1.2em;
+		font-weight: 600;
+		margin-right: 0.25rem;
+	}
+
+	.body {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.details {
 		display: flex;
 		flex-direction: column;
 	}
 
-	.gig-name {
-		font-weight: 600;
+	.button-container {
+		margin-left: auto;
+		width: 100%;
+	}
+
+	.location {
+		margin-top: 0.25rem;
 	}
 
 	@container container (width < 600px) {
-		.gig {
+		.container {
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;

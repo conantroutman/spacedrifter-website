@@ -24,7 +24,18 @@
 		color: inherit;
 	}
 
+	a:hover {
+		background: var(--wtcf-gradient);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
 	.active {
 		text-decoration: underline;
+		background: var(--wtcf-gradient);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>

@@ -7,6 +7,7 @@
 	allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 	loading="lazy"
 	style="border-radius: 12px;"
+	on:load={() => console.log('iframe loaded')}
 ></iframe>
 
 <style>

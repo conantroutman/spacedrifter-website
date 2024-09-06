@@ -1,8 +1,10 @@
 <script>
 	import { Spotify } from 'sveltekit-embed';
-	import { music } from './data/music';
-	import { getReleaseTypeName } from './utils';
-	import Container from './Container.svelte';
+	import { music } from '../data/music';
+	import { getReleaseTypeName } from '../utils';
+	import Container from '../Container.svelte';
+	import Heading from '../Heading.svelte';
+	import AlbumCover from '../AlbumCover.svelte';
 
 	const musicIds = Object.keys(music);
 
@@ -13,17 +15,20 @@
 	];
 </script>
 
-<h2>Music</h2>
+<div class="heading">
+	<Heading level={2} centered>Releases</Heading>
+</div>
 
 <div class="grid">
 	{#each musicIds as id}
 		<div class="release-container">
-			<a href={`/music/${id}`}
-				><img class="cover" src={`/music/covers/${id}.jpg`} alt={music[id].name} /></a
-			>
+			<a href={`/music/${id}`}><AlbumCover {id} /></a>
+			<div>{music[id].name}</div>
 			<div class="description">
-				{music[id].releaseDate.toLocaleDateString(undefined, { year: 'numeric' })}
-				{getReleaseTypeName(music[id].type)}
+				<span class="year"
+					>{music[id].releaseDate.toLocaleDateString(undefined, { year: 'numeric' })}</span
+				>
+				<span>{getReleaseTypeName(music[id].type)}</span>
 			</div>
 		</div>
 	{/each}
@@ -42,13 +47,7 @@
 		}
 	}
 
-	.cover {
-		width: 100%;
-		object-fit: cover;
-	}
-
-	h2 {
-		text-align: center;
+	.heading {
 		margin-bottom: 2rem;
 	}
 
@@ -60,5 +59,17 @@
 
 	.description {
 		text-align: center;
+	}
+
+	.year {
+		font-weight: 600;
+	}
+
+	a {
+		transition: 100ms ease-in-out;
+	}
+
+	a:hover {
+		filter: brightness(1.1);
 	}
 </style>

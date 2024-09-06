@@ -1,11 +1,27 @@
+interface GigLink {
+	href: string;
+	type: 'info' | 'tickets';
+}
+
 export interface Gig {
 	date: Date;
 	name: string;
 	location: string;
 	venue?: string;
+	link?: GigLink;
 }
 
 export const gigs: Gig[] = [
+	{
+		name: 'Molior Superum + Spacedrifter',
+		location: 'Göteborg',
+		date: new Date('2024-12-14'),
+		venue: 'Fyrens Ölkafé',
+		link: {
+			href: 'https://facebook.com',
+			type: 'info'
+		}
+	},
 	{
 		name: 'Music Mayhem 2024 (Beardmen 10 år)',
 		location: 'Skövde',
