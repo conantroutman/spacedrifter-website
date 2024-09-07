@@ -14,10 +14,12 @@
 
 <style>
 	.container {
-		padding: 2rem;
+		margin-top: 1rem;
 	}
 
 	ol {
+		margin: 0;
 		padding-left: 0;
+		list-style-position: inside;
 	}
 </style>
