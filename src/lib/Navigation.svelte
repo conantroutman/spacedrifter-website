@@ -1,13 +1,44 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	$: path = $page.url.pathname;
+
+	interface NavigationLink {
+		href: string;
+		isExternal?: true;
+		hasSubpages?: true;
+		label: string;
+	}
+
+	const links: NavigationLink[] = [
+		{
+			href: '/',
+			label: 'Home'
+		},
+		{
+			href: '/music',
+			label: 'Music',
+			hasSubpages: true
+		},
+		{
+			href: '/live',
+			label: 'Live'
+		},
+		{
+			href: 'https://spacedrifterband.bandcamp.com/merch',
+			isExternal: true,
+			label: 'Merch'
+		}
+	];
 </script>
 
 <nav>
-	<a href="/" class:active={path === '/'}>Home</a>
-	<a href="/music" class:active={path.includes('/music')}>Music</a>
-	<a href="/live" class:active={path === '/live'}>Live</a>
-	<a href="https://spacedrifterband.bandcamp.com/merch" target="_blank">Merch</a>
+	{#each links as { href, isExternal, label, hasSubpages }}
+		<a
+			{href}
+			target={isExternal ? '_blank' : undefined}
+			class:active={hasSubpages ? path.includes(href) : path === href}>{label}</a
+		>
+	{/each}
 </nav>
 
 <style>
