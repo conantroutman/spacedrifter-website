@@ -7,10 +7,10 @@
 
 <footer>
 	<nav>
-		<a href="https://instagram.com/spacedrifterband" target="_blank" title="Facebook">
+		<a href="https://instagram.com/spacedrifterband" target="_blank" title="Instagram">
 			<InstagramIcon />
 		</a>
-		<a href="https://instagram.com/spacedrifterband" target="_blank" title="Instagram">
+		<a href="https://www.facebook.com/spacedrifterband" target="_blank" title="Facebook">
 			<FacebookIcon />
 		</a>
 		<a href="https://spacedrifterband.bandcamp.com" target="_blank" title="Bandcamp">
