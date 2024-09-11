@@ -57,4 +57,10 @@
 		font-weight: 600;
 		font-size: 1.2rem;
 	}
+
+	@media screen and (max-width: 640px) {
+		.container {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>

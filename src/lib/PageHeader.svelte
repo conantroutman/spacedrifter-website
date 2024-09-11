@@ -28,7 +28,8 @@
 
 	.logo {
 		fill: #fff;
-		width: 400px;
+		width: 100%;
+		max-width: 400px;
 		transition: 200ms ease-in-out;
 	}
 </style>
