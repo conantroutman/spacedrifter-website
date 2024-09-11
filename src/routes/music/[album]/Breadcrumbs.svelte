@@ -4,12 +4,17 @@
 	import { base } from '$app/paths';
 
 	// Bit dodgy but works for now
-	$: id = $page.url.pathname.split('/').filter((value) => Boolean(value))[1];
+	$: id = $page.url.pathname
+		.split('/')
+		.filter((value) => Boolean(value))
+		.pop();
 </script>
 
-<nav>
-	<a href={`${base}/music`}>Music</a> / {music[id]?.name}
-</nav>
+{#if id}
+	<nav>
+		<a href={`${base}/music`}>Music</a> / {music[id]?.name}
+	</nav>
+{/if}
 
 <style>
 	nav {
