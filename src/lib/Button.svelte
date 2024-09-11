@@ -1,14 +1,19 @@
 <script lang="ts">
+	import type { HTMLAnchorAttributes } from 'svelte/elements';
+
 	export let href: string;
 	export let fullWidth: boolean = false;
 	export let width: number | undefined = undefined;
+	export let target: HTMLAnchorAttributes['target'] = '_blank';
+	export let color: string | undefined = undefined;
 </script>
 
 <a
 	{href}
 	class:full-width={fullWidth}
-	style={width ? `width: ${width}px` : undefined}
-	target="_blank"><slot /></a
+	style:width={width ? `${width}px` : undefined}
+	style:--hover-background={color ?? 'var(--wtcf-gradient)'}
+	{target}><slot /></a
 >
 
 <style>
@@ -31,7 +36,7 @@
 
 	a:hover {
 		outline: none;
-		background: var(--wtcf-gradient);
+		background: var(--hover-background);
 		color: #000;
 	}
 
