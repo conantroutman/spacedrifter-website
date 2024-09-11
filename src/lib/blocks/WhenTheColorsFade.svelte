@@ -7,7 +7,12 @@
 <div class="query">
 	<div class="container">
 		<div class="cover">
-			<img src={`${base}/vinyl.png`} alt="When the Colors Fade" loading="lazy" />
+			<enhanced:img
+				src={`${base}/vinyl.png`}
+				alt="When the Colors Fade"
+				loading="lazy"
+				class="image"
+			/>
 		</div>
 		<div class="cta">
 			<Heading level={2} centered>Debut LP "When the Colors Fade" Out Now!</Heading>
@@ -46,7 +51,7 @@
 			text-align: center;
 		}
 
-		img {
+		.image {
 			height: auto;
 		}
 	}
@@ -71,7 +76,7 @@
 		height: 100%;
 	}
 
-	img {
+	.image {
 		width: 500px;
 		height: 500px;
 		object-fit: contain;
