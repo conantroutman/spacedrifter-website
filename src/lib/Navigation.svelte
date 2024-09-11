@@ -12,16 +12,16 @@
 
 	const links: NavigationLink[] = [
 		{
-			href: '/',
+			href: `${base}/`,
 			label: 'Home'
 		},
 		{
-			href: 'music',
+			href: `${base}/music`,
 			label: 'Music',
 			hasSubpages: true
 		},
 		{
-			href: 'live',
+			href: `${base}/live`,
 			label: 'Live'
 		},
 		{
@@ -35,7 +35,7 @@
 <nav>
 	{#each links as { href, isExternal, label, hasSubpages }}
 		<a
-			href={isExternal ? href : `${base}/${href}`}
+			{href}
 			target={isExternal ? '_blank' : undefined}
 			class:active={hasSubpages ? path.includes(href) : path === href}>{label}</a
 		>
