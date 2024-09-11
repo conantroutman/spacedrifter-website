@@ -58,6 +58,7 @@
 	li {
 		container-name: container;
 		container-type: inline-size;
+		border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
 	}
 
 	.container {
