@@ -12,21 +12,25 @@ export interface Gig {
 }
 
 export const gigs: Gig[] = [
-	{
-		name: 'Molior Superum + Spacedrifter',
-		location: 'Göteborg',
-		date: new Date('2024-12-14'),
-		venue: 'Fyrens Ölkafé',
-		link: {
-			href: 'https://facebook.com',
-			type: 'info'
-		}
-	},
+	// {
+	// 	name: 'Molior Superum + Spacedrifter',
+	// 	location: 'Göteborg',
+	// 	date: new Date('2024-12-14'),
+	// 	venue: 'Fyrens Ölkafé',
+	// 	link: {
+	// 		href: 'https://facebook.com',
+	// 		type: 'info'
+	// 	}
+	// },
 	{
 		name: 'Music Mayhem 2024 (Beardmen 10 år)',
 		location: 'Skövde',
 		date: new Date('2024-07-26'),
-		venue: 'Husaren'
+		venue: 'Husaren',
+		link: {
+			href: 'https://google.com',
+			type: 'tickets'
+		}
 	},
 	{
 		name: 'SufferCity in Rock 2024',

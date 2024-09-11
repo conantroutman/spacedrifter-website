@@ -21,6 +21,8 @@
 
 		return date.toLocaleDateString(undefined, options);
 	}
+
+	const currentDate = new Date();
 </script>
 
 <li>
@@ -40,7 +42,7 @@
 				</div>
 			</div>
 		</div>
-		{#if gig.link}
+		{#if gig.link && gig.date >= currentDate}
 			<div class="button-container">
 				<Button href={gig.link.href} fullWidth>
 					{#if gig.link.type === 'info'}
