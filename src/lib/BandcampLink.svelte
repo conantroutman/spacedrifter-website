@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Button from './Button.svelte';
-	import SpotifyIcon from './icons/SpotifyIcon.svelte';
+	import BandcampIcon from './icons/BandcampIcon.svelte';
 
-	export let spotifyId: string;
+	export let href: string;
 	export let fullWidth: boolean = false;
 </script>
 
-<Button href={`https://open.spotify.com/${spotifyId}`} target="_blank" {fullWidth} color="#1ed760"
-	><span>Spotify <SpotifyIcon /></span></Button
+<Button {href} target="_blank" {fullWidth} color="#1da0c3"
+	><span>Bandcamp <BandcampIcon /></span></Button
 >
 
 <style>

@@ -20,10 +20,7 @@
 <Container>
 	<Breadcrumbs />
 	<div class="container">
-		<div class="left">
-			<AlbumCover id={$page.params.album} />
-			<Spotify spotifyLink={data.links.spotify} width="100%" />
-		</div>
+		<AlbumCover id={$page.params.album} />
 
 		<div class="details">
 			<Heading>{data.name}</Heading>
@@ -39,6 +36,7 @@
 			<LinkList data={data.links} />
 		</div>
 	</div>
+	<Spotify spotifyLink={data.links.spotify} width="100%" />
 </Container>
 
 <style>
@@ -46,6 +44,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+		margin-bottom: 4rem;
 	}
 
 	.left {

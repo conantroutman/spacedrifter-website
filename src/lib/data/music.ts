@@ -17,7 +17,8 @@ export const music: { [id: string]: MusicRelease } = {
 		releaseDate: new Date('2024-04-05'),
 		type: 'album',
 		links: {
-			spotify: 'album/1KlxdWlt5UHHKhsLbnYeT5?si=uNk4GlaQRTCkb-KJE1wgQA'
+			spotify: 'album/1KlxdWlt5UHHKhsLbnYeT5?si=uNk4GlaQRTCkb-KJE1wgQA',
+			bandcamp: 'https://spacedrifterband.bandcamp.com/album/when-the-colors-fade'
 		},
 		trackList: [
 			'Dwell',
