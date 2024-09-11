@@ -73,7 +73,6 @@
 
 	.image {
 		width: 500px;
-		height: 500px;
 		object-fit: contain;
 	}
 </style>
