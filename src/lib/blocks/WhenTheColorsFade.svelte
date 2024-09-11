@@ -44,6 +44,10 @@
 		h2 {
 			text-align: center;
 		}
+
+		img {
+			height: auto;
+		}
 	}
 
 	.cta {
@@ -69,5 +73,6 @@
 	img {
 		width: 500px;
 		height: 500px;
+		object-fit: contain;
 	}
 </style>
