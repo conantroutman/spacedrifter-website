@@ -6,8 +6,8 @@ export const youtubeVideos = [
 	'https://www.youtube.com/watch?v=7rH6hBou4hI',
 	'https://www.youtube.com/watch?v=IpR1yNytFn0',
 	'https://www.youtube.com/watch?v=oPMMN-LSn-s',
-	'https://www.youtube.com/watch?v=MLRWJjCQhXc',
 	'https://www.youtube.com/watch?v=stI7kTP7aDU',
 	'https://www.youtube.com/watch?v=Y_LPk4O7-uQ',
-	'https://www.youtube.com/watch?v=VgKUTkOTJQc'
+	'https://www.youtube.com/watch?v=VgKUTkOTJQc',
+	'https://www.youtube.com/watch?v=YUixMYCgQQE'
 ];
