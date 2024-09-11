@@ -4,12 +4,7 @@
 	export let id: keyof typeof music;
 </script>
 
-<enhanced:img
-	class="cover"
-	src={`${base}/music/covers/${id}.jpg`}
-	alt={music[id].name}
-	loading="lazy"
-/>
+<img class="cover" src={`${base}/music/covers/${id}.jpg`} alt={music[id].name} loading="lazy" />
 
 <style>
 	.cover {

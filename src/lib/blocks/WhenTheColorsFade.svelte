@@ -7,12 +7,7 @@
 <div class="query">
 	<div class="container">
 		<div class="cover">
-			<enhanced:img
-				src={`${base}/vinyl.png`}
-				alt="When the Colors Fade"
-				loading="lazy"
-				class="image"
-			/>
+			<img src={`${base}/vinyl.png`} alt="When the Colors Fade" loading="lazy" class="image" />
 		</div>
 		<div class="cta">
 			<Heading level={2} centered>Debut LP "When the Colors Fade" Out Now!</Heading>
