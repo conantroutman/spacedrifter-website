@@ -2,11 +2,10 @@
 	import Container from '$lib/Container.svelte';
 	import MusicReleases from '$lib/blocks/MusicReleases.svelte';
 	import Section from '$lib/Section.svelte';
-	import SpotifyEmbed from '$lib/SpotifyEmbed.svelte';
 	import WhenTheColorsFade from '$lib/blocks/WhenTheColorsFade.svelte';
 </script>
 
-<Section>
+<Section swirlBackground backgroundColor="#201a26">
 	<Container>
 		<WhenTheColorsFade />
 	</Container>
