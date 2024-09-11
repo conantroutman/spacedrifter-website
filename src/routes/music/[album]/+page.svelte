@@ -24,13 +24,15 @@
 
 		<div class="details">
 			<Heading>{data.name}</Heading>
-			<div class="type">{getReleaseTypeName(data.type)}</div>
-			<div class="date">
-				Release Date: {data.releaseDate.toLocaleDateString(undefined, {
-					day: '2-digit',
-					month: 'long',
-					year: 'numeric'
-				})}
+			<div class="release-info">
+				<div class="type">{getReleaseTypeName(data.type)}</div>
+				<div class="date">
+					Release Date: {data.releaseDate.toLocaleDateString(undefined, {
+						day: '2-digit',
+						month: 'long',
+						year: 'numeric'
+					})}
+				</div>
 			</div>
 			<TrackList data={data.trackList} />
 			<LinkList data={data.links} />
@@ -47,15 +49,13 @@
 		margin-bottom: 4rem;
 	}
 
-	.left {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
 	.type {
 		font-weight: 600;
 		font-size: 1.2rem;
+	}
+
+	.release-info {
+		margin-top: 0.5rem;
 	}
 
 	@media screen and (max-width: 640px) {
