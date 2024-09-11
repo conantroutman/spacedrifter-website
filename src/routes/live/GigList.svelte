@@ -33,6 +33,10 @@
 		margin-bottom: 4rem;
 	}
 
+	.heading p {
+		margin-top: 0.5rem;
+	}
+
 	.gig-list {
 		list-style: none;
 		padding-left: 0;
