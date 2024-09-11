@@ -5,6 +5,7 @@
 	import Container from '../Container.svelte';
 	import Heading from '../Heading.svelte';
 	import AlbumCover from '../AlbumCover.svelte';
+	import { base } from '$app/paths';
 
 	const musicIds = Object.keys(music);
 
@@ -22,7 +23,7 @@
 <div class="grid">
 	{#each musicIds as id}
 		<div class="release-container">
-			<a href={`/music/${id}`}><AlbumCover {id} /></a>
+			<a href={`${base}/music/${id}`}><AlbumCover {id} /></a>
 			<div>{music[id].name}</div>
 			<div class="description">
 				<span class="year"

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	$: path = $page.url.pathname;
 
@@ -15,12 +16,12 @@
 			label: 'Home'
 		},
 		{
-			href: '/music',
+			href: 'music',
 			label: 'Music',
 			hasSubpages: true
 		},
 		{
-			href: '/live',
+			href: 'live',
 			label: 'Live'
 		},
 		{
@@ -34,7 +35,7 @@
 <nav>
 	{#each links as { href, isExternal, label, hasSubpages }}
 		<a
-			{href}
+			href={isExternal ? href : `${base}/${href}`}
 			target={isExternal ? '_blank' : undefined}
 			class:active={hasSubpages ? path.includes(href) : path === href}>{label}</a
 		>
