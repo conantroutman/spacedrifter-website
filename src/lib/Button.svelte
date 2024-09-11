@@ -34,7 +34,8 @@
 		outline-offset: calc(-1 * var(--border-width));
 	}
 
-	a:hover {
+	a:hover,
+	a:active {
 		outline: none;
 		background: var(--hover-background);
 		color: #000;
