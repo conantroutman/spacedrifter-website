@@ -38,7 +38,8 @@ export const music: { [id: string]: MusicRelease } = {
 		releaseDate: new Date('2021-01-01'),
 		type: 'ep',
 		links: {
-			spotify: 'album/2Jjmg5YDVd9B49E7Wc7OdT?si=uMqD4b9TRHSkscfEY5Y6lA'
+			spotify: 'album/2Jjmg5YDVd9B49E7Wc7OdT?si=uMqD4b9TRHSkscfEY5Y6lA',
+			bandcamp: 'https://spacedrifterband.bandcamp.com/album/spacedrifter'
 		},
 		trackList: [
 			'Artificial Ignorance',
