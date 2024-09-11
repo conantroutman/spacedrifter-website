@@ -5,7 +5,7 @@
 </script>
 
 <header>
-	<a href={base} class="logo"><Logo /></a>
+	<a href={`${base}/`} class="logo"><Logo /></a>
 	<Navigation />
 </header>
 
