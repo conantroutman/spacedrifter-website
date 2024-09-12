@@ -28,7 +28,7 @@
 	}
 
 	.swirl-background {
-		background-image: url('swirls.svg');
+		background-image: url('$lib/assets/swirls.svg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: max(100vw, 2000px);
