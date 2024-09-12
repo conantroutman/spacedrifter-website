@@ -82,6 +82,10 @@
 		margin-right: 0.25rem;
 	}
 
+	.date > span:last-of-type {
+		font-family: 'SUSE', sans-serif;
+	}
+
 	.body {
 		display: flex;
 		flex-direction: row;
