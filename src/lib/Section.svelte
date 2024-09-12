@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let swirlBackground: boolean = false;
-	export let backgroundColor: string = '#000';
+	export let backgroundColor: string = 'inherit';
 </script>
 
 <section style:--section-background-color={backgroundColor}>
@@ -28,7 +28,7 @@
 	}
 
 	.swirl-background {
-		background-image: url('./swirls.svg');
+		background-image: url('swirls.svg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: max(100vw, 2000px);
