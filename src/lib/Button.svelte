@@ -33,6 +33,7 @@
 		outline: var(--border-width) solid #fff;
 		outline-offset: calc(-1 * var(--border-width));
 		background-color: rgba(255, 255, 255, 0.05);
+		position: relative;
 	}
 
 	a:hover,
@@ -40,6 +41,18 @@
 		outline: none;
 		background: var(--hover-background);
 		color: #000;
+	}
+
+	a:before {
+		content: '';
+		background-color: transparent;
+		background-image: url('$lib/assets/noise.svg');
+		background-repeat: repeat;
+		background-size: 182px;
+		opacity: 0.12;
+		position: absolute;
+		inset: 0;
+		z-index: -10;
 	}
 
 	.full-width {

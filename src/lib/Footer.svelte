@@ -39,7 +39,7 @@
 		/* left: 0; */
 		/* right: 0; */
 		padding: 1rem;
-		background-color: #000;
+		background-color: inherit;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

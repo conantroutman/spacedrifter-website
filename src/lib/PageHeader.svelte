@@ -22,8 +22,21 @@
 		right: 0;
 		z-index: 10;
 		padding: 1rem;
-		background: rgba(0, 0, 0, 0.85);
+		background: var(--background-color);
 		backdrop-filter: blur(0.5);
+		border-bottom: rgba(255, 255, 255, 0.65) 2px solid;
+	}
+
+	header:before {
+		content: '';
+		background-color: transparent;
+		background-image: url('$lib/assets/noise.svg');
+		background-repeat: repeat;
+		background-size: 182px;
+		opacity: 0.12;
+		position: absolute;
+		inset: 0;
+		z-index: -10;
 	}
 
 	.logo {
