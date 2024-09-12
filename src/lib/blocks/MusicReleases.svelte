@@ -1,8 +1,6 @@
 <script>
-	import { Spotify } from 'sveltekit-embed';
 	import { music } from '../data/music';
 	import { getReleaseTypeName } from '../utils';
-	import Container from '../Container.svelte';
 	import Heading from '../Heading.svelte';
 	import AlbumCover from '../AlbumCover.svelte';
 	import { base } from '$app/paths';
