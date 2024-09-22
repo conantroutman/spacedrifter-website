@@ -23,6 +23,11 @@ export const gigs: Gig[] = [
 	// 	}
 	// },
 	{
+		name: 'Logdans 3.0',
+		location: 'Ullervad',
+		date: new Date('2024-08-31')
+	},
+	{
 		name: 'Music Mayhem 2024 (Beardmen 10 år)',
 		location: 'Skövde',
 		date: new Date('2024-07-26'),
