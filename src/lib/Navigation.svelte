@@ -64,10 +64,20 @@
 	}
 
 	.active {
-		text-decoration: underline;
 		background: var(--wtcf-gradient);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		position: relative;
+	}
+
+	.active::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -2px;
+		height: 2px;
+		background: var(--wtcf-gradient);
 	}
 </style>
