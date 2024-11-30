@@ -1,18 +1,13 @@
 <script>
-	import { base } from '$app/paths';
 	import Button from '../Button.svelte';
 	import Heading from '../Heading.svelte';
+	import VinylImage from '$lib/assets/vinyl.png?enhanced';
 </script>
 
 <div class="query">
 	<div class="container">
 		<div class="cover">
-			<enhanced:img
-				src={`${base}/vinyl.png`}
-				alt="When the Colors Fade"
-				loading="lazy"
-				class="image"
-			/>
+			<enhanced:img src={VinylImage} alt="When the Colors Fade" loading="lazy" class="image" />
 		</div>
 		<div class="cta">
 			<Heading level={2} centered>Debut LP "When the Colors Fade" Out Now!</Heading>
@@ -79,5 +74,6 @@
 	.image {
 		width: 500px;
 		object-fit: contain;
+		height: fit-content;
 	}
 </style>
