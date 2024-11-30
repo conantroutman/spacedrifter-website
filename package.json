@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
@@ -40,6 +40,7 @@
 	"dependencies": {
 		"@threlte/core": "^7.3.1",
 		"@types/three": "^0.167.1",
+		"svelte-media-queries": "^1.6.2",
 		"sveltekit-embed": "^0.0.12",
 		"three": "^0.167.0"
 	}

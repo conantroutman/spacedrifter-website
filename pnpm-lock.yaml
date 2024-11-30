@@ -14,6 +14,9 @@ importers:
       '@types/three':
         specifier: ^0.167.1
         version: 0.167.1
+      svelte-media-queries:
+        specifier: ^1.6.2
+        version: 1.6.2
       sveltekit-embed:
         specifier: ^0.0.12
         version: 0.0.12
@@ -1421,6 +1424,9 @@ packages:
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
+
+  svelte-media-queries@1.6.2:
+    resolution: {integrity: sha512-SMz6od/vIeZEGlc4P0HKJK4G0fZotuwFhCSpBQaPqh75h6sL6sNf+4+IjbegFKXbP7b+SOfyzVOIMXTr8jynkA==}
 
   svelte-parse-markup@0.1.5:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
@@ -2917,6 +2923,8 @@ snapshots:
   svelte-hmr@0.16.0(svelte@4.2.18):
     dependencies:
       svelte: 4.2.18
+
+  svelte-media-queries@1.6.2: {}
 
   svelte-parse-markup@0.1.5(svelte@4.2.18):
     dependencies:

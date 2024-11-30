@@ -35,7 +35,10 @@
 				</div>
 			</div>
 			<TrackList data={data.trackList} />
-			<LinkList data={data.links} />
+			<div class="listen">
+				<Heading level={2}>Listen</Heading>
+				<LinkList data={data.links} />
+			</div>
 		</div>
 	</div>
 	<Spotify spotifyLink={data.links.spotify} width="100%" />
@@ -46,7 +49,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	.type {
@@ -56,6 +59,14 @@
 
 	.release-info {
 		margin-top: 0.5rem;
+	}
+
+	.listen {
+		margin-top: 2rem;
+	}
+
+	:global(.listen > h2) {
+		margin-bottom: 1rem;
 	}
 
 	@media screen and (max-width: 640px) {

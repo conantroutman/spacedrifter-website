@@ -1,35 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { links } from '$lib/data/navigation';
 	import { page } from '$app/stores';
 	$: path = $page.url.pathname;
-
-	interface NavigationLink {
-		href: string;
-		isExternal?: true;
-		hasSubpages?: true;
-		label: string;
-	}
-
-	const links: NavigationLink[] = [
-		{
-			href: `${base}/`,
-			label: 'Home'
-		},
-		{
-			href: `${base}/music`,
-			label: 'Music',
-			hasSubpages: true
-		},
-		{
-			href: `${base}/live`,
-			label: 'Live'
-		},
-		{
-			href: 'https://spacedrifterband.bandcamp.com/merch',
-			isExternal: true,
-			label: 'Merch'
-		}
-	];
 </script>
 
 <nav>
