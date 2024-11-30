@@ -22,12 +22,14 @@
 	{#each musicIds as id}
 		<div class="release-container">
 			<a href={`${base}/music/${id}`}><AlbumCover {id} /></a>
-			<div>{music[id].name}</div>
-			<div class="description">
-				<span class="year"
-					>{music[id].releaseDate.toLocaleDateString(undefined, { year: 'numeric' })}</span
-				>
-				<span>{getReleaseTypeName(music[id].type)}</span>
+			<div class="details">
+				<div>{music[id].name}</div>
+				<div class="description">
+					<span class="year"
+						>{music[id].releaseDate.toLocaleDateString(undefined, { year: 'numeric' })}</span
+					>
+					<span>{getReleaseTypeName(music[id].type)}</span>
+				</div>
 			</div>
 		</div>
 	{/each}
@@ -51,6 +53,14 @@
 	}
 
 	.release-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.details {
+		width: 100%;
+		padding: 0.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
