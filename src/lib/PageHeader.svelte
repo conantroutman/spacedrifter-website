@@ -3,21 +3,17 @@
 	import HamburgerButton from './HamburgerButton.svelte';
 	import Logo from './Logo.svelte';
 	import Navigation from './Navigation.svelte';
-
-	let innerWidth: number;
-	$: isMobile = innerWidth <= 640;
 </script>
-
-<svelte:window bind:innerWidth />
 
 <header>
 	<a href={`${base}/`} class="logo"><Logo /></a>
 	<div class="container">
-		{#if isMobile}
+		<div class="mobile">
 			<HamburgerButton />
-		{:else}
+		</div>
+		<div class="desktop">
 			<Navigation />
-		{/if}
+		</div>
 	</div>
 </header>
 
@@ -57,7 +53,8 @@
 		transition: 200ms ease-in-out;
 	}
 
-	.container {
+	.mobile {
+		display: none;
 	}
 
 	@media only screen and (max-width: 640px) {
@@ -72,6 +69,14 @@
 
 		.container {
 			position: relative;
+		}
+
+		.mobile {
+			display: block;
+		}
+
+		.desktop {
+			display: none;
 		}
 	}
 </style>
