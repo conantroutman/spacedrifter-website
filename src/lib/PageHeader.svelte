@@ -1,11 +1,34 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
 	import HamburgerButton from './HamburgerButton.svelte';
 	import Logo from './Logo.svelte';
 	import Navigation from './Navigation.svelte';
+
+	let scrollY: number;
+	let lastScrollTop = 0;
+	let isScrollingDown = false;
+
+	onMount(() => {
+		lastScrollTop = document?.documentElement.scrollTop;
+	});
+
+	const handleScroll = () => {
+		const scrollTopPosition = document.documentElement.scrollTop;
+
+		if (scrollTopPosition > lastScrollTop && !isScrollingDown) {
+			isScrollingDown = true;
+		} else if (scrollTopPosition < lastScrollTop && isScrollingDown) {
+			isScrollingDown = false;
+		}
+
+		lastScrollTop = scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+	};
 </script>
 
-<header>
+<svelte:window bind:scrollY on:scroll={handleScroll} />
+
+<header class:hidden={scrollY > 72 && isScrollingDown}>
 	<a href={`${base}/`} class="logo"><Logo /></a>
 	<div class="container">
 		<div class="mobile">
@@ -61,6 +84,12 @@
 		header {
 			flex-direction: row;
 			justify-content: space-between;
+			height: 72px;
+			transition: top 200ms ease-in-out;
+		}
+
+		header.hidden {
+			top: -72px;
 		}
 
 		.logo {
