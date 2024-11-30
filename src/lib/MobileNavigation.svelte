@@ -7,7 +7,7 @@
 	import { page } from '$app/stores';
 	import CloseIcon from './icons/CloseIcon.svelte';
 
-	let matches: any;
+	let matches: boolean;
 	$: isMobile = !!matches;
 	$: path = $page.url.pathname;
 
@@ -28,7 +28,7 @@
 			<button class="close-btn" on:click={handleClickClose}><CloseIcon /></button>
 			<nav>
 				<ul>
-					{#each links as link, index}
+					{#each links as link}
 						<li transition:fly={{ y: 100 }} class="link-item">
 							<a
 								href={link.href}

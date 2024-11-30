@@ -3,13 +3,12 @@
 	import HamburgerButton from './HamburgerButton.svelte';
 	import Logo from './Logo.svelte';
 	import Navigation from './Navigation.svelte';
-	import MediaQuery from 'svelte-media-queries';
 
-	let matches: any;
-	$: isMobile = !!matches;
+	let innerWidth: number;
+	$: isMobile = innerWidth <= 640;
 </script>
 
-<MediaQuery query="(max-width: 640px)" bind:matches />
+<svelte:window bind:innerWidth />
 
 <header>
 	<a href={`${base}/`} class="logo"><Logo /></a>
