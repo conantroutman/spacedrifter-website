@@ -16,6 +16,7 @@
 		color: white;
 		padding: 0;
 		margin: 0;
+		cursor: pointer;
 	}
 
 	:global(button > svg) {
