@@ -25,7 +25,9 @@
 {#if isMobile && $mobileMenuVisible}
 	<div class="outer-container" transition:fade={{ duration: 200 }}>
 		<div class="container">
-			<button class="close-btn" on:click={handleClickClose}><CloseIcon /></button>
+			<button class="close-btn" on:click={handleClickClose} aria-label="Close mobile menu"
+				><CloseIcon /></button
+			>
 			<nav>
 				<ul>
 					{#each links as link}

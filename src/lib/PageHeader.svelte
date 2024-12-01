@@ -29,7 +29,7 @@
 <svelte:window bind:scrollY on:scroll={handleScroll} />
 
 <header class:hidden={scrollY > 72 && isScrollingDown}>
-	<a href={`${base}/`} class="logo"><Logo /></a>
+	<a href={`${base}/`} class="logo" aria-label="Logo"><Logo /></a>
 	<div class="container">
 		<div class="mobile">
 			<HamburgerButton />

@@ -7,7 +7,7 @@
 	};
 </script>
 
-<button on:click={handleClick}><HamburgerIcon /></button>
+<button on:click={handleClick} aria-label="Open mobile menu"><HamburgerIcon /></button>
 
 <style>
 	button {
