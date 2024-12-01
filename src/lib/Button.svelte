@@ -34,6 +34,7 @@
 		outline-offset: calc(-1 * var(--border-width));
 		background-color: rgba(255, 255, 255, 0.05);
 		position: relative;
+		backdrop-filter: blur(5px);
 	}
 
 	a:hover,
