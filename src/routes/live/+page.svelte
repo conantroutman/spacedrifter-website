@@ -3,12 +3,15 @@
 	import Section from '$lib/Section.svelte';
 	import { gigs } from './data';
 	import GigList from './GigList.svelte';
+	import SEO from '$lib/SEO.svelte';
 
 	const currentDate = new Date();
 
 	const pastGigs = gigs.filter((gig) => gig.date < currentDate);
 	const futureGigs = gigs.filter((gig) => gig.date >= currentDate);
 </script>
+
+<SEO title="Spacedrifter - Live" metadescription="Spacedrifter live shows." slug="/live" />
 
 <Section>
 	<Container>

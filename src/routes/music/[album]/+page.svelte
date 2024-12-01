@@ -9,13 +9,20 @@
 	import AlbumCover from '$lib/AlbumCover.svelte';
 	import LinkList from './LinkList.svelte';
 	import Heading from '$lib/Heading.svelte';
+	import SEO from '$lib/SEO.svelte';
 
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<title>{data.name} | Spacedrifter</title>
-</svelte:head>
+<SEO
+	title={`Spacedrifter - ${data.name}`}
+	metadescription={data.description}
+	slug={`/music/${$page.params.album}`}
+	albumMetadata={{
+		releaseDate: data.releaseDate,
+		audio: `https://open.spotify.com/${data.links.spotify}`
+	}}
+/>
 
 <Container>
 	<Breadcrumbs />

@@ -9,6 +9,7 @@ export interface MusicRelease {
 		bandcamp?: string;
 	};
 	trackList: string[];
+	description: string;
 }
 
 export const music: { [id: string]: MusicRelease } = {
@@ -31,7 +32,9 @@ export const music: { [id: string]: MusicRelease } = {
 			'Through the Desert',
 			'NFOB',
 			'When the Colors Fade'
-		]
+		],
+		description:
+			"When the Colors Fade is Spacedrifter's debut album, released 2024-04-05. Available on vinyl and digital."
 	},
 	spacedrifter: {
 		name: 'Spacedrifter',
@@ -47,7 +50,8 @@ export const music: { [id: string]: MusicRelease } = {
 			'Perpetuum Mobile',
 			'Maroon',
 			'Farewell'
-		]
+		],
+		description: "Spacedrifter's self-titled EP, released 2021-01-01."
 	},
 	'cabin-fever': {
 		name: 'Cabin Fever',
@@ -56,6 +60,7 @@ export const music: { [id: string]: MusicRelease } = {
 		links: {
 			spotify: 'album/5KAWeDP3sSPt7C1nn3UDEM?si=48jD0Gu8S_u-b34p6V9urg'
 		},
-		trackList: ['Cabin Fever']
+		trackList: ['Cabin Fever'],
+		description: "Cabin Fever is Spacedrifter's first ever recorded song, released 2020-06-12."
 	}
 } as const;
