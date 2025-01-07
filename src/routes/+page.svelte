@@ -4,6 +4,9 @@
 	import Section from '$lib/Section.svelte';
 	import WhenTheColorsFade from '$lib/blocks/WhenTheColorsFade.svelte';
 	import SEO from '$lib/SEO.svelte';
+	import PhotoCredit from '$lib/PhotoCredit.svelte';
+	import BandPhoto from '../lib/assets/photos/_DSC2591.jpg?enhanced';
+	import ImageWrapper from '$lib/SEO/ImageWrapper.svelte';
 </script>
 
 <SEO
@@ -22,4 +25,12 @@
 	<Container>
 		<MusicReleases />
 	</Container>
+</Section>
+
+<Section>
+	<PhotoCredit credit="Marcus Karppinen">
+		<ImageWrapper>
+			<enhanced:img src={BandPhoto} alt="Spacedrifter in action" />
+		</ImageWrapper>
+	</PhotoCredit>
 </Section>

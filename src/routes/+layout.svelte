@@ -1,8 +1,6 @@
 <script>
 	import Footer from '$lib/Footer.svelte';
-	import Logo from '$lib/Logo.svelte';
 	import MobileNavigation from '$lib/MobileNavigation.svelte';
-	import Navigation from '$lib/Navigation.svelte';
 	import PageHeader from '$lib/PageHeader.svelte';
 	import '../main.css';
 </script>
