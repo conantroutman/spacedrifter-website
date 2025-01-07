@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { BANDCAMP_URL, FACEBOOK_URL, INSTAGRAM_URL, SPOTIFY_URL } from './constants';
 	import BandcampIcon from './icons/BandcampIcon.svelte';
 	import FacebookIcon from './icons/FacebookIcon.svelte';
 
@@ -9,21 +10,16 @@
 </script>
 
 <nav>
-	<a href="https://instagram.com/spacedrifterband" target="_blank" title="Instagram" class:large>
+	<a href={INSTAGRAM_URL} target="_blank" title="Instagram" class:large>
 		<InstagramIcon />
 	</a>
-	<a href="https://www.facebook.com/spacedrifterband" target="_blank" title="Facebook" class:large>
+	<a href={FACEBOOK_URL} target="_blank" title="Facebook" class:large>
 		<FacebookIcon />
 	</a>
-	<a href="https://spacedrifterband.bandcamp.com" target="_blank" title="Bandcamp" class:large>
+	<a href={BANDCAMP_URL} target="_blank" title="Bandcamp" class:large>
 		<BandcampIcon />
 	</a>
-	<a
-		href="https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=9JJXwJB1TIq0nZ3a3ey9Qg"
-		target="_blank"
-		title="Spotify"
-		class:large
-	>
+	<a href={SPOTIFY_URL} target="_blank" title="Spotify" class:large>
 		<SpotifyIcon />
 	</a>
 </nav>
