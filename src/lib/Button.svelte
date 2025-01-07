@@ -6,6 +6,7 @@
 	export let width: number | undefined = undefined;
 	export let target: HTMLAnchorAttributes['target'] = '_blank';
 	export let color: string | undefined = undefined;
+	export let download: string | boolean = false;
 </script>
 
 <a
@@ -13,7 +14,8 @@
 	class:full-width={fullWidth}
 	style:width={width ? `${width}px` : undefined}
 	style:--hover-background={color ?? 'var(--wtcf-gradient)'}
-	{target}><slot /></a
+	{target}
+	{download}><span class="content"><slot /></span></a
 >
 
 <style>
@@ -58,5 +60,13 @@
 
 	.full-width {
 		width: 100%;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+		gap: 0.25rem;
+		margin: auto;
+		width: fit-content;
 	}
 </style>
