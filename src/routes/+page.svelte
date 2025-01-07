@@ -27,7 +27,7 @@
 	</Container>
 </Section>
 
-<Section>
+<Section noPadding>
 	<PhotoCredit credit="Marcus Karppinen">
 		<ImageWrapper>
 			<enhanced:img src={BandPhoto} alt="Spacedrifter in action" />
