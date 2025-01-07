@@ -1,7 +1,5 @@
 <script lang="ts">
-	import ImageWithDownload from '$lib/ImageWithDownload.svelte';
 	import ImageWrapper from '$lib/SEO/ImageWrapper.svelte';
-
 	import PhotoEnhanced from '$lib/assets/epk/photo1.jpg?enhanced';
 	import CoverEnhanced from '$lib/assets/epk/cover.png?enhanced';
 	import Button from '$lib/Button.svelte';
