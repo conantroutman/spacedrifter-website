@@ -55,8 +55,8 @@
 	.container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
-		margin-bottom: 2rem;
+		gap: var(--spacing-lg);
+		margin-bottom: var(--spacing-lg);
 	}
 
 	.type {
@@ -65,15 +65,15 @@
 	}
 
 	.release-info {
-		margin-top: 0.5rem;
+		margin-top: var(--spacing-xs);
 	}
 
 	.listen {
-		margin-top: 2rem;
+		margin-top: var(--spacing-lg);
 	}
 
 	:global(.listen > h2) {
-		margin-bottom: 1rem;
+		margin-bottom: var(--spacing-base);
 	}
 
 	@media screen and (max-width: 640px) {

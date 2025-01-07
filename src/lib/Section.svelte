@@ -1,10 +1,12 @@
 <script lang="ts">
 	export let swirlBackground: boolean = false;
 	export let backgroundColor: string = 'inherit';
+	export let compact: boolean = false;
 </script>
 
 <section
 	style:--section-background-color={backgroundColor}
+	style:--padding={compact ? '2rem' : '4rem'}
 	class:swirl-background={swirlBackground}
 >
 	<div class="content">
@@ -16,7 +18,7 @@
 	section {
 		width: 100%;
 		height: 100%;
-		padding: 4rem 0;
+		padding: var(--padding) 0;
 		background-color: var(--section-background-color);
 		position: relative;
 	}
