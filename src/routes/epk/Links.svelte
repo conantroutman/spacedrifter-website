@@ -24,10 +24,6 @@
 </div>
 
 <style>
-	.socials {
-		font-size: 1.2rem;
-	}
-
 	.socials ul {
 		list-style: none;
 		padding: 0;
