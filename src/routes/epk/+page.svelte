@@ -9,9 +9,11 @@
 	import Links from './Links.svelte';
 	import Logos from './Logos.svelte';
 	import Photos from './Photos.svelte';
+	import PageTitle from '$lib/PageTitle.svelte';
 </script>
 
 <NoIndex />
+<PageTitle title="Spacedrifter - EPK" />
 
 <Container>
 	<div class="heading">
