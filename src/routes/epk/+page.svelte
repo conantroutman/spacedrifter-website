@@ -30,7 +30,7 @@
 			<p>
 				Spacedrifter is an alternative rock band from Mariestad, Sweden, formed in 2019. Their sound
 				fuses grunge with the raw energy of garage rock, the heavy riffs of stoner rock and the
-				trippy vibes psychedelic rock, featuring rich vocal harmonies and fuzzy guitars.
+				trippy vibes of psychedelic rock, featuring rich vocal harmonies and fuzzy guitars.
 			</p>
 			<p>
 				In 2024, Spacedrifter released their first full length album, <strong
