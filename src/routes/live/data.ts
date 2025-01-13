@@ -12,16 +12,12 @@ export interface Gig {
 }
 
 export const gigs: Gig[] = [
-	// {
-	// 	name: 'Molior Superum + Spacedrifter',
-	// 	location: 'Göteborg',
-	// 	date: new Date('2024-12-14'),
-	// 	venue: 'Fyrens Ölkafé',
-	// 	link: {
-	// 		href: 'https://facebook.com',
-	// 		type: 'info'
-	// 	}
-	// },
+	{
+		name: 'Big 4 + Spacedrifter',
+		location: 'Hova',
+		date: new Date('2025-03-08'),
+		venue: 'MF Rockfickan'
+	},
 	{
 		name: 'Logdans 3.0',
 		location: 'Ullervad',
