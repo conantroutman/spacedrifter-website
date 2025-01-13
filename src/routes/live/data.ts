@@ -16,7 +16,11 @@ export const gigs: Gig[] = [
 		name: 'Big 4 + Spacedrifter',
 		location: 'Hova',
 		date: new Date('2025-03-08'),
-		venue: 'MF Rockfickan'
+		venue: 'MF Rockfickan',
+		link: {
+			href: 'https://www.tickster.com/se/sv/events/zlnepm0gz3xbfgt/2025-03-08/big-4-nwobhm',
+			type: 'tickets'
+		}
 	},
 	{
 		name: 'Logdans 3.0',
