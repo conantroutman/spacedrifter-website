@@ -30,11 +30,11 @@
 <style>
 	.heading {
 		text-align: center;
-		margin-bottom: 4rem;
+		margin-bottom: var(--spacing-xl);
 	}
 
 	.heading p {
-		margin-top: 0.5rem;
+		margin-top: var(--spacing-xs);
 	}
 
 	.gig-list {

@@ -66,9 +66,9 @@
 	.container {
 		display: grid;
 		grid-template-columns: 240px 1fr 200px;
-		gap: 2rem;
+		gap: var(--spacing-lg);
 		border-bottom: 1px solid black;
-		padding: 1.5rem 0;
+		padding: var(--spacing-md) 0;
 	}
 
 	.date {
