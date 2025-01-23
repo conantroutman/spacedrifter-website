@@ -12,11 +12,11 @@ export interface Gig {
 }
 
 export const gigs: Gig[] = [
-	{
-		name: 'TBA',
-		location: 'Mariestad',
-		date: new Date('2025-06-28')
-	},
+	// {
+	// 	name: 'TBA',
+	// 	location: 'Mariestad',
+	// 	date: new Date('2025-06-28')
+	// },
 	{
 		name: 'TBA',
 		location: 'Trelleborg',
