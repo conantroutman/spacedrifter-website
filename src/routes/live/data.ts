@@ -13,6 +13,29 @@ export interface Gig {
 
 export const gigs: Gig[] = [
 	{
+		name: 'TBA',
+		location: 'Mariestad',
+		date: new Date('2025-06-28')
+	},
+	{
+		name: 'TBA',
+		location: 'Trelleborg',
+		date: new Date('2025-05-24'),
+		venue: 'TBA'
+	},
+	{
+		name: 'TBA',
+		location: 'Mariestad',
+		date: new Date('2025-05-10'),
+		venue: 'TBA'
+	},
+	{
+		name: 'TBA',
+		location: 'Göteborg',
+		date: new Date('2025-03-22'),
+		venue: 'TBA'
+	},
+	{
 		name: 'Big 4 + Spacedrifter',
 		location: 'Hova',
 		date: new Date('2025-03-08'),
