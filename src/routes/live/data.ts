@@ -20,7 +20,7 @@ export const gigs: Gig[] = [
 	{
 		name: 'TBA',
 		location: 'Trelleborg',
-		date: new Date('2025-05-24'),
+		date: new Date('2025-05-23'),
 		venue: 'TBA'
 	},
 	{
