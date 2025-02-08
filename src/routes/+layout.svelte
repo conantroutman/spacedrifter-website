@@ -32,7 +32,7 @@
 	.container:before {
 		content: '';
 		background-color: transparent;
-		background-image: url('$lib/assets/noise.svg');
+		/* background-image: url('$lib/assets/noise.svg'); */
 		background-repeat: repeat;
 		background-size: 182px;
 		opacity: 0.12;
