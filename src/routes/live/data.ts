@@ -20,7 +20,7 @@ export const gigs: Gig[] = [
 	{
 		name: 'TBA',
 		location: 'Trelleborg',
-		date: new Date('2025-05-24'),
+		date: new Date('2025-05-23'),
 		venue: 'TBA'
 	},
 	{
@@ -30,10 +30,14 @@ export const gigs: Gig[] = [
 		venue: 'TBA'
 	},
 	{
-		name: 'TBA',
+		name: 'Spacedrifter + Molior Superum',
 		location: 'Göteborg',
 		date: new Date('2025-03-22'),
-		venue: 'TBA'
+		venue: 'Fyrens Ölkafé',
+		link: {
+			href: 'https://www.tickster.com/se/sv/events/xu61370up0u972j/2025-03-22/spacedrifter-molior-superum',
+			type: 'tickets'
+		}
 	},
 	{
 		name: 'Big 4 + Spacedrifter',

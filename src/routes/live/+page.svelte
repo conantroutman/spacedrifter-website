@@ -8,7 +8,7 @@
 	const currentDate = new Date();
 
 	const pastGigs = gigs.filter((gig) => gig.date < currentDate);
-	const futureGigs = gigs.filter((gig) => gig.date >= currentDate);
+	const futureGigs = gigs.filter((gig) => gig.date >= currentDate).toReversed();
 </script>
 
 <SEO title="Spacedrifter - Live" metadescription="Spacedrifter live shows." slug="/live" />
