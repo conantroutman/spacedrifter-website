@@ -49,7 +49,7 @@ h6 {
 		var(--wtcf-mid-color) 50%,
 		var(--wtcf-light-color) 100%
 	);
-	--background-color: #000000;
+	--background-color: #070707;
 
 	--spacing-base: 1rem;
 	--spacing-xs: calc(0.5 * var(--spacing-base));
