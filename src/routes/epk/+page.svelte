@@ -4,16 +4,15 @@
 	import Heading from '$lib/Heading.svelte';
 	import MailIcon from '$lib/icons/MailIcon.svelte';
 	import Section from '$lib/Section.svelte';
-	import NoIndex from '$lib/SEO/NoIndex.svelte';
 	import SpotifyEmbed from '$lib/SpotifyEmbed.svelte';
 	import Links from './Links.svelte';
 	import Logos from './Logos.svelte';
 	import Photos from './Photos.svelte';
-	import PageTitle from '$lib/PageTitle.svelte';
+	import SEO from '$lib/SEO.svelte';
+	import Videos from './Videos.svelte';
 </script>
 
-<NoIndex />
-<PageTitle title="Spacedrifter - EPK" />
+<SEO title="Spacedrifter - EPK" metadescription="Spacedrifter EPK." slug="/epk" noindex />
 
 <Container>
 	<div class="heading">
@@ -56,6 +55,17 @@
 		</div>
 		<article>
 			<SpotifyEmbed compact={false} />
+		</article>
+	</Container>
+</Section>
+
+<Section compact>
+	<Container>
+		<div class="section-heading">
+			<Heading level={2}>Videos</Heading>
+		</div>
+		<article>
+			<Videos />
 		</article>
 	</Container>
 </Section>

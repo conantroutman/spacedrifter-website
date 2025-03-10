@@ -5,10 +5,6 @@
 	import '../main.css';
 </script>
 
-<svelte:head>
-	<title>Spacedrifter</title>
-</svelte:head>
-
 <div class="container">
 	<PageHeader />
 

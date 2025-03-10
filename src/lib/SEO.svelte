@@ -7,6 +7,7 @@
 	export let metadescription: string;
 	export let slug: string;
 	export let albumMetadata: AlbumMetadata | undefined = undefined;
+	export let noindex: boolean = false;
 
 	const url = `https://spacedrifter.band${slug}`;
 	const lang = 'en-US';
@@ -17,7 +18,9 @@
 	<meta name="description" content={metadescription} />
 	<meta
 		name="robots"
-		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+		content={noindex
+			? 'noindex, nofollow'
+			: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}
 	/>
 	<meta name="url" content={url} />
 	<link rel="canonical" href={url} />
