@@ -19,14 +19,23 @@ export const gigs: Gig[] = [
 	// },
 	{
 		name: 'TBA',
-		location: 'Trelleborg',
-		date: new Date('2025-05-23'),
-		venue: 'TBA'
+		location: 'Skövde',
+		date: new Date('2025-10-18')
+	},
+	{
+		name: 'Mariestad Rockfest',
+		location: 'Mariestad',
+		date: new Date('2025-09-06'),
+		venue: 'Karlsholme Folkets Park',
+		link: {
+			href: 'https://fb.me/e/5tvELG5YU',
+			type: 'info'
+		}
 	},
 	{
 		name: 'TBA',
-		location: 'Mariestad',
-		date: new Date('2025-05-10'),
+		location: 'Trelleborg',
+		date: new Date('2025-05-23'),
 		venue: 'TBA'
 	},
 	{
