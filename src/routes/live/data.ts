@@ -19,8 +19,13 @@ export const gigs: Gig[] = [
 	// },
 	{
 		name: 'TBA',
-		location: 'Skövde',
+		location: 'TBA',
 		date: new Date('2025-10-18')
+	},
+	{
+		name: 'TBA',
+		location: 'TBA',
+		date: new Date('2025-09-12')
 	},
 	{
 		name: 'Mariestad Rockfest',
