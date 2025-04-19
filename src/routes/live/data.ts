@@ -38,16 +38,20 @@ export const gigs: Gig[] = [
 		}
 	},
 	{
-		name: 'TBA',
+		name: 'Spacedrifter + Paranoia',
 		location: 'Malmö',
 		date: new Date('2025-05-24'),
-		venue: 'TBA'
+		venue: 'Grand Circus Hotel'
 	},
 	{
-		name: 'TBA',
+		name: 'Spacedrifter + Sleepwalker',
 		location: 'Trelleborg',
 		date: new Date('2025-05-23'),
-		venue: 'TBA'
+		venue: 'Kulturhuset',
+		link: {
+			href: 'https://www.kulturcentralen.nu/evenemang/spacedriftersleepwalker',
+			type: 'tickets'
+		}
 	},
 	{
 		name: 'Spacedrifter + Molior Superum',
