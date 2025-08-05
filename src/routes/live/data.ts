@@ -20,11 +20,11 @@ export const gigs: Gig[] = [
 	{
 		name: 'TBA',
 		location: 'TBA',
-		date: new Date('2025-10-18')
+		date: new Date('2025-12-13')
 	},
 	{
-		name: 'TBA',
-		location: 'TBA',
+		name: 'Mud Grief Release Party',
+		location: 'Göteborg',
 		date: new Date('2025-09-12')
 	},
 	{
@@ -36,6 +36,12 @@ export const gigs: Gig[] = [
 			href: 'https://fb.me/e/5tvELG5YU',
 			type: 'info'
 		}
+	},
+	{
+		name: 'Lilla Björkö w/ Graveyard',
+		location: 'Lugnås',
+		date: new Date('2025-08-16'),
+		venue: 'Lilla Björkö'
 	},
 	{
 		name: 'Spacedrifter + Paranoia',
