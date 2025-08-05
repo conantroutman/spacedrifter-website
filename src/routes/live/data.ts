@@ -25,7 +25,11 @@ export const gigs: Gig[] = [
 	{
 		name: 'Mud Grief Release Party',
 		location: 'Göteborg',
-		date: new Date('2025-09-12')
+		date: new Date('2025-09-12'),
+		link: {
+			href: 'https://fb.me/e/5zsmYcvLP',
+			type: 'info'
+		}
 	},
 	{
 		name: 'Mariestad Rockfest',
@@ -41,7 +45,11 @@ export const gigs: Gig[] = [
 		name: 'Lilla Björkö w/ Graveyard',
 		location: 'Lugnås',
 		date: new Date('2025-08-16'),
-		venue: 'Lilla Björkö'
+		venue: 'Lilla Björkö',
+		link: {
+			href: 'https://secure.tickster.com/sv/dzdf0jblc6g3rwf/h65rk2v993zjj5p/products',
+			type: 'tickets'
+		}
 	},
 	{
 		name: 'Spacedrifter + Paranoia',
