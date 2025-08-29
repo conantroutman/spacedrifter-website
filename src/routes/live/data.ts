@@ -12,14 +12,9 @@ export interface Gig {
 }
 
 export const gigs: Gig[] = [
-	// {
-	// 	name: 'TBA',
-	// 	location: 'Mariestad',
-	// 	date: new Date('2025-06-28')
-	// },
 	{
-		name: 'TBA',
-		location: 'TBA',
+		name: 'Spacedrifter + Mud Grief',
+		location: 'Skövde',
 		date: new Date('2025-12-13')
 	},
 	{
@@ -50,6 +45,11 @@ export const gigs: Gig[] = [
 			href: 'https://secure.tickster.com/sv/dzdf0jblc6g3rwf/h65rk2v993zjj5p/products',
 			type: 'tickets'
 		}
+	},
+	{
+		name: 'Live i Sörgårn',
+		location: 'Hasslerör',
+		date: new Date('2025-06-28')
 	},
 	{
 		name: 'Spacedrifter + Paranoia',
