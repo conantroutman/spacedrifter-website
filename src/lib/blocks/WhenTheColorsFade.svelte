@@ -1,13 +1,24 @@
-<script>
+<script lang="ts">
 	import Button from '../Button.svelte';
 	import Heading from '../Heading.svelte';
 	import VinylImage from '$lib/assets/vinyl.png?enhanced';
+
+	const handleLoad = (e: Event) => {
+		const element = e.target as HTMLImageElement;
+		element.dataset.loaded = 'true';
+	};
 </script>
 
 <div class="query">
 	<div class="container">
 		<div class="cover">
-			<enhanced:img src={VinylImage} alt="When the Colors Fade" loading="lazy" class="image" />
+			<enhanced:img
+				src={VinylImage}
+				alt="When the Colors Fade"
+				loading="lazy"
+				class="image"
+				on:load={handleLoad}
+			/>
 		</div>
 		<div class="cta">
 			<Heading level={2} centered>Debut LP "When the Colors Fade" Out Now!</Heading>
@@ -75,5 +86,11 @@
 		width: 500px;
 		object-fit: contain;
 		height: fit-content;
+		opacity: 0;
+		transition: opacity 200ms ease-in-out;
+	}
+
+	.image[data-loaded='true'] {
+		opacity: 1;
 	}
 </style>
