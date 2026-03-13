@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from '../Button.svelte';
 	import Heading from '../Heading.svelte';
 	import VinylImage from '$lib/assets/vinyl.png?enhanced';
