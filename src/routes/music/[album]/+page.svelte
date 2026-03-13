@@ -20,7 +20,8 @@
 	slug={`/music/${$page.params.album}`}
 	albumMetadata={{
 		releaseDate: data.releaseDate,
-		audio: `https://open.spotify.com/${data.links.spotify}`
+		audio: `https://open.spotify.com/${data.links.spotify}`,
+		image: `/music/covers/${$page.params.album}.jpg`
 	}}
 />
 

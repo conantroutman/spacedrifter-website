@@ -13,6 +13,7 @@
 		<meta name="og:type" content="music.album" />
 		<meta name="music.album.release_date" content={albumMetadata.releaseDate.toISOString()} />
 		<meta name="og:audio" content={albumMetadata.audio} />
+		<meta name="og:image" content={albumMetadata.image} />
 	{:else}
 		<meta name="og:type" content="website" />
 	{/if}
