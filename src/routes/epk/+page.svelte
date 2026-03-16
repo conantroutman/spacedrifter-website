@@ -27,45 +27,16 @@
 		</div>
 		<article>
 			<p>
-				Spacedrifter is an alternative rock band from Mariestad, Sweden, formed in 2019. Their sound
-				fuses grunge with the raw energy of garage rock, the heavy riffs of stoner rock and the
-				trippy vibes of psychedelic rock, featuring rich vocal harmonies and fuzzy guitars.
+				Spacedrifter is the band that will hit you with heavy riffs while simultaneously deliver
+				smooth vocal harmonies, resulting in a dynamic soundscape reminiscent of the alternative
+				rock bands of the 90’s. With an intense energy, and a raw, psychedelic feel, Spacedrifter
+				blurs the line between the aggressive and the colorful in rock music.
 			</p>
 			<p>
-				In 2024, Spacedrifter released their first full length album, <strong
-					>“When the Colors Fade”</strong
-				>, which the band recorded and produced entirely by themselves in their own studio. The
-				recording process was a long and arduous journey but the album was finally released in April
-				2024.
-			</p>
-			<p>
-				A second full length album is currently in the making and recording started in August 2024,
-				this time in the Welfare Sounds studio in Gothenburg. The album is set to be released in
-				2025.
+				The live shows take the audience on a journey between aggressive ’in your face’, hard rock,
+				and soft, retro, psychedelic rock.
 			</p>
 			<BandMembers />
-		</article>
-	</Container>
-</Section>
-
-<Section compact>
-	<Container>
-		<div class="section-heading">
-			<Heading level={2}>Spotify</Heading>
-		</div>
-		<article>
-			<SpotifyEmbed compact={false} />
-		</article>
-	</Container>
-</Section>
-
-<Section compact>
-	<Container>
-		<div class="section-heading">
-			<Heading level={2}>Videos</Heading>
-		</div>
-		<article>
-			<Videos />
 		</article>
 	</Container>
 </Section>
@@ -95,9 +66,11 @@
 <Section compact>
 	<Container>
 		<div class="section-heading">
-			<Heading level={2}>Links</Heading>
+			<Heading level={2}>Videos</Heading>
 		</div>
-		<Links />
+		<article>
+			<Videos />
+		</article>
 	</Container>
 </Section>
 
@@ -109,6 +82,26 @@
 		<div class="email">
 			<a href="mailto:contact@spacedrifter.band"><MailIcon /> contact@spacedirfter.band</a>
 		</div>
+	</Container>
+</Section>
+
+<Section compact>
+	<Container>
+		<div class="section-heading">
+			<Heading level={2}>Links</Heading>
+		</div>
+		<Links />
+	</Container>
+</Section>
+
+<Section compact>
+	<Container>
+		<div class="section-heading">
+			<Heading level={2}>Spotify</Heading>
+		</div>
+		<article>
+			<SpotifyEmbed compact={false} />
+		</article>
 	</Container>
 </Section>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ImageWrapper from '$lib/SEO/ImageWrapper.svelte';
-	import PhotoEnhanced from '$lib/assets/epk/photo1.jpg?enhanced';
+	import PhotoEnhanced from '$lib/assets/epk/photo2.jpg?enhanced';
 	import CoverEnhanced from '$lib/assets/epk/cover.png?enhanced';
 	import Button from '$lib/Button.svelte';
 	import DownloadIcon from '$lib/icons/DownloadIcon.svelte';
@@ -12,7 +12,7 @@
 			<enhanced:img src={PhotoEnhanced} alt="Press photo" />
 		</ImageWrapper>
 		<div class="download">
-			<Button href="/epk/photo1.jpg" target="_self" download="Spacedrifter Press Photo.jpg"
+			<Button href="/epk/photo2.jpg" target="_self" download="Spacedrifter Press Photo.jpg"
 				><DownloadIcon /> Download High Res</Button
 			>
 		</div>
