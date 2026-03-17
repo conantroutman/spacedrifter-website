@@ -1,0 +1,64 @@
+{
+	"en": {
+		"heading": "Spacedrifter Electronic Press Kit",
+		"bio": {
+			"heading": "Bio",
+			"text": "<p>Spacedrifter is the band that will hit you with heavy riffs while simultaneously deliver smooth vocal harmonies, resulting in a dynamic soundscape reminiscent of the alternative rock bands of the 90’s. With an intense energy, and a raw, psychedelic feel, Spacedrifter blurs the line between the aggressive and the colorful in rock music.</p><p>The live shows take the audience on a journey between aggressive ’in your face’, hard rock, and soft, retro, psychedelic rock.</p>",
+			"members": "Members",
+			"instruments": {
+				"drums": "Drums",
+				"bass": "Bass",
+				"guitar": "Guitar",
+				"vocals": "Vocals"
+			}
+		},
+		"photos": {
+			"heading": "Photos",
+			"download": "Download High Res"
+		},
+		"logo": {
+			"heading": "Logo",
+			"download": "Download Logo"
+		},
+		"videos": {
+			"heading": "Videos"
+		},
+		"contact": {
+			"heading": "Contact"
+		},
+		"links": {
+			"heading": "Links"
+		}
+	},
+	"sv": {
+		"heading": "Spacedrifter Elektroniskt Presskit",
+		"bio": {
+			"heading": "Bio",
+			"text": "<p>Spacedrifter is the band that will hit you with heavy riffs while simultaneously deliver smooth vocal harmonies, resulting in a dynamic soundscape reminiscent of the alternative rock bands of the 90’s. With an intense energy, and a raw, psychedelic feel, Spacedrifter blurs the line between the aggressive and the colorful in rock music.</p><p>The live shows take the audience on a journey between aggressive ’in your face’, hard rock, and soft, retro, psychedelic rock.</p>",
+			"members": "Medlemmar",
+			"instruments": {
+				"drums": "Trummor",
+				"bass": "Bas",
+				"guitar": "Gitarr",
+				"vocals": "Sång"
+			}
+		},
+		"photos": {
+			"heading": "Foton",
+			"download": "Ladda ned högupplöst"
+		},
+		"logo": {
+			"heading": "Logga",
+			"download": "Ladda ned logga"
+		},
+		"videos": {
+			"heading": "Video"
+		},
+		"contact": {
+			"heading": "Kontakt"
+		},
+		"links": {
+			"heading": "Länkar"
+		}
+	}
+}

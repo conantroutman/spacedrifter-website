@@ -4,6 +4,8 @@
 	import CoverEnhanced from '$lib/assets/epk/cover.png?enhanced';
 	import Button from '$lib/Button.svelte';
 	import DownloadIcon from '$lib/icons/DownloadIcon.svelte';
+
+	export let downloadButtonLabel: string;
 </script>
 
 <div class="list">
@@ -13,7 +15,7 @@
 		</ImageWrapper>
 		<div class="download">
 			<Button href="/epk/photo2.jpg" target="_self" download="Spacedrifter Press Photo.jpg"
-				><DownloadIcon /> Download High Res</Button
+				><DownloadIcon /> {downloadButtonLabel}</Button
 			>
 		</div>
 	</div>
@@ -24,7 +26,7 @@
 		</ImageWrapper>
 		<div class="download">
 			<Button href="/epk/cover.png" target="_self" download="When the Colors Fade Cover.png"
-				><DownloadIcon /> Download High Res</Button
+				><DownloadIcon /> {downloadButtonLabel}</Button
 			>
 		</div>
 	</div>

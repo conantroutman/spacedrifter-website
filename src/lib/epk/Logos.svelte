@@ -1,13 +1,15 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/Button.svelte';
 	import DownloadIcon from '$lib/icons/DownloadIcon.svelte';
+
+	export let downloadButtonLabel: string;
 </script>
 
 <div class="logo">
 	<img src="/Logo.png" alt="Spacedrifter logo" />
 </div>
 <Button href="/epk/logos.zip" target="_self" download="Spacedrifter Logos.zip"
-	><DownloadIcon /> Download Logo</Button
+	><DownloadIcon /> {downloadButtonLabel}</Button
 >
 
 <style>
