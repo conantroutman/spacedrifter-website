@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Container from '$lib/Container.svelte';
 	import Heading from '$lib/Heading.svelte';
 	import RandomYoutubeVideo from '$lib/RandomYoutubeVideo.svelte';
@@ -9,8 +9,8 @@
 <Section>
 	<Container>
 		<Heading>
-			{$page.status}
-			{$page.error?.message}
+			{page.status}
+			{page.error?.message}
 		</Heading>
 
 		<div>

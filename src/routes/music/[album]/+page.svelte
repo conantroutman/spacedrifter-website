@@ -5,7 +5,7 @@
 	import Container from '$lib/Container.svelte';
 	import { getReleaseTypeName } from '$lib/utils';
 	import TrackList from './TrackList.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import AlbumCover from '$lib/AlbumCover.svelte';
 	import LinkList from './LinkList.svelte';
 	import Heading from '$lib/Heading.svelte';
@@ -17,18 +17,18 @@
 <SEO
 	title={`Spacedrifter - ${data.name}`}
 	metadescription={data.description}
-	slug={`/music/${$page.params.album}`}
+	slug={`/music/${page.params.album}`}
 	albumMetadata={{
 		releaseDate: data.releaseDate,
 		audio: `https://open.spotify.com/${data.links.spotify}`,
-		image: `/music/covers/${$page.params.album}.jpg`
+		image: `/music/covers/${page.params.album}.jpg`
 	}}
 />
 
 <Container>
 	<Breadcrumbs />
 	<div class="container">
-		<AlbumCover id={$page.params.album} />
+		<AlbumCover id={page.params.album ?? ''} />
 
 		<div class="details">
 			<Heading>{data.name}</Heading>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { links } from '$lib/data/navigation';
-	import { page } from '$app/stores';
-	$: path = $page.url.pathname;
+	import { page } from '$app/state';
+	$: path = page.url.pathname;
 </script>
 
 <nav>

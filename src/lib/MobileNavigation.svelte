@@ -4,12 +4,12 @@
 	import { mobileMenuVisible } from './stores';
 	import { fade, fly } from 'svelte/transition';
 	import SocialMedia from './SocialMedia.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import CloseIcon from './icons/CloseIcon.svelte';
 
 	let matches: boolean;
 	$: isMobile = !!matches;
-	$: path = $page.url.pathname;
+	$: path = page.url.pathname;
 
 	const handleClickClose = () => {
 		mobileMenuVisible.set(false);
