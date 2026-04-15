@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { links } from '$lib/data/navigation';
-	import { page } from '$app/state';
-	$: path = page.url.pathname;
+	import { page } from '$app/stores';
+
+	$: console.log($page.url.pathname);
 </script>
 
 <nav>
@@ -9,7 +10,8 @@
 		<a
 			{href}
 			target={isExternal ? '_blank' : undefined}
-			class:active={hasSubpages ? path.includes(href) : path === href}>{label}</a
+			class:active={hasSubpages ? $page.url.pathname.includes(href) : $page.url.pathname === href}
+			>{label}</a
 		>
 	{/each}
 </nav>

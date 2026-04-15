@@ -3,15 +3,18 @@
 <script lang="ts">
 	import Container from '$lib/Container.svelte';
 	import Heading from '$lib/Heading.svelte';
+	import PageTemplate from '$lib/PageTemplate.svelte';
 	import RandomYoutubeVideo from '$lib/RandomYoutubeVideo.svelte';
 	import Section from '$lib/Section.svelte';
 </script>
 
-<Section>
-	<Container>
-		<Heading>404 Not Found</Heading>
-		<p>Sorry about that.</p>
-		<p>Here's a random Youtube video!</p>
-		<RandomYoutubeVideo />
-	</Container>
-</Section>
+<PageTemplate>
+	<Section>
+		<Container>
+			<Heading>404 Not Found</Heading>
+			<p>Sorry about that.</p>
+			<p>Here's a random Youtube video!</p>
+			<RandomYoutubeVideo />
+		</Container>
+	</Section>
+</PageTemplate>
