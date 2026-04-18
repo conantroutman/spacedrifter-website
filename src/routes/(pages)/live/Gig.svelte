@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/Button.svelte';
+	import type { Gig } from '$lib/data/gigs';
 	import Heading from '$lib/Heading.svelte';
-	import type { Gig } from './data';
 
 	export let gig: Gig;
 

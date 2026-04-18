@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/Container.svelte';
 	import Section from '$lib/Section.svelte';
-	import { gigs } from './data';
+	import { gigs } from '$lib/data/gigs';
 	import GigList from './GigList.svelte';
 	import SEO from '$lib/SEO.svelte';
 

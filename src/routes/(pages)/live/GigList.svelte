@@ -2,7 +2,7 @@
 	import Container from '$lib/Container.svelte';
 	import Heading from '$lib/Heading.svelte';
 	import Section from '$lib/Section.svelte';
-	import type { Gig as GigData } from './data';
+	import type { Gig as GigData } from '$lib/data/gigs';
 	import Gig from './Gig.svelte';
 
 	export let data: GigData[];

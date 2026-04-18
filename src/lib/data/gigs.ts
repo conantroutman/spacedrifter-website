@@ -13,7 +13,7 @@ export interface Gig {
 
 export const gigs: Gig[] = [
 	{
-		name: 'High Fidelity: Grand Selmer + Spacedrifter',
+		name: 'Grand Selmer + Spacedrifter',
 		location: 'Göteborg',
 		venue: 'Oceanen',
 		date: new Date('2026-06-05'),
