@@ -13,16 +13,6 @@ export interface Gig {
 
 export const gigs: Gig[] = [
 	{
-		name: 'Grand Selmer + Spacedrifter',
-		location: 'Göteborg',
-		venue: 'Oceanen',
-		date: new Date('2026-06-05'),
-		link: {
-			href: 'https://billetto.se/e/high-fidelity-grand-selmer-spacedrifter-biljetter-1897294?utm_source=organiser&utm_medium=share&utm_campaign=copy_link&utm_content=1',
-			type: 'tickets'
-		}
-	},
-	{
 		name: 'Spacedrifter + IN CA$H + Tartar',
 		location: 'Trollhättan',
 		date: new Date('2026-04-15')
