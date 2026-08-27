@@ -13,6 +13,17 @@ export interface Gig {
 
 export const gigs: Gig[] = [
 	{
+		name: 'Skövde in Rock Discoveries',
+		location: 'Skövde',
+		venue: "Lokstallet",
+		date: new Date('2026-10-03')
+	},
+	{
+		name: 'Mariestad Rockfest',
+		location: 'Mariestad',
+		date: new Date('2026-09-05')
+	},
+	{
 		name: 'Spacedrifter + IN CA$H + Tartar',
 		location: 'Trollhättan',
 		date: new Date('2026-04-15')
