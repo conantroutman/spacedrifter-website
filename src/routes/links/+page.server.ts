@@ -23,6 +23,14 @@ export async function load(): Promise<{ links: LinkItem[] }> {
 
 	return {
 		links: [
+			{
+				label: 'Meantime on Bandcamp',
+				url: 'https://spacedrifterband.bandcamp.com/track/meantime'
+			},
+			{
+				label: 'Meantime on Spotify',
+				url: 'https://open.spotify.com/track/5CDytofsrKivHaGDnftbLy?si=8e2825932c8742f7'
+			},
 			...gigLinks,
 			{
 				label: 'Spotify',
