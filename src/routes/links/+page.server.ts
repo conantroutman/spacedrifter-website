@@ -24,6 +24,10 @@ export async function load(): Promise<{ links: LinkItem[] }> {
 	return {
 		links: [
 			{
+				label: 'NEW SINGLE: Overthrown on Spotify',
+				url: 'https://open.spotify.com/track/1vrWH1tUI9lLn9OtRJlkuV?si=867ceeba3c5c4e02'
+			},
+			{
 				label: 'Meantime on Bandcamp',
 				url: 'https://spacedrifterband.bandcamp.com/track/meantime'
 			},
